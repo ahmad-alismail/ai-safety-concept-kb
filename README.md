@@ -1,59 +1,63 @@
 # Misaligned Behaviors and Dangerous Capabilities in AI Safety: A Conceptual Cross-Source Analysis
 
-> **Paper:** [link forthcoming](#)
+> A living, LLM-maintained knowledge base that maps how AI safety concepts — power-seeking, deception, scheming, alignment faking, sandbagging — relate, overlap, and **contradict** across 84 primary sources.
 
-## Authors
-
-| Author | Email | Affiliation(s) |
-|--------|-------|----------------|
-| Ahmad Alismail | ahmad.alismail@hs-heilbronn.de | Heilbronn University of Applied Sciences — Heilbronn, Germany |
-| Woldai Betiel | b.woldai@hs-ansbach.de | Ansbach University of Applied Sciences — Ansbach, Germany |
-| Carsten Lanquillon | carsten@coairesearch.org | Heilbronn University of Applied Sciences — Heilbronn, Germany; COAI Research — Nuremberg, Germany |
-| Sigurd Schacht | sigurd@coairesearch.org | Ansbach University of Applied Sciences — Ansbach, Germany; COAI Research — Nuremberg, Germany |
-
-## What This Project Is
+<p align="center">
+  <a href="#">📄 Paper</a> •
+  <a href="https://notebooklm.google.com/notebook/bb18bcc1-096c-40db-b076-f6527624bb5e/artifact/7a76dfaa-6e59-4d6b-8f16-7b95653cd7e2?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_" target="_blank">🎧 NotebookLM Audio</a>
+</p>
 
 ![Overview poster: Misaligned Behaviors and Dangerous Capabilities in AI Safety — A Conceptual Cross-Source Analysis](imgs/poster.png)
 
-This repository contains:
+## The Problem
 
-1. **The wiki** (`wiki/`) — an LLM-maintained knowledge base that was incrementally built from 84 AI safety sources. It contains 774 interlinked markdown pages (189 concepts, plus source summaries, entity profiles, debates, evidence maps, evaluation methods, findings, and open questions) connected by 7,583 wikilinks. The wiki surfaces where sources agree and where they contradict each other.
+Is *power-seeking* a behavior? An instrumental goal? A tendency, a drive, a capability, or a risk? Depending on which paper you open, it's any of them. AI safety has a fast-growing vocabulary — deception, scheming, sandbagging, situational awareness, alignment faking — but no shared framework for how these concepts fit together. The same term means different things to different labs; different terms sometimes mean the same thing. Compound tactics get treated as if they were primitive behaviors.
 
-2. **The raw sources** (`raw/`) — the markdown that the wiki was built from. **Source PDFs are not redistributed in this repository** (copyright). Instead, `raw/papers/` is where each source's Marker-converted markdown lives, and `staging-area/` holds the original PDF before conversion. The LLM reads from these but never modifies them. To reproduce or extend the wiki, add your own sources (see Setup below).
+This project builds a structured, interlinked knowledge base from the literature that surfaces exactly **where sources agree and where they quietly contradict each other** — working toward a coherent ontology of AI safety concepts.
 
-3. **The paper** — the academic write-up describing the method and findings, presenting what the wiki revealed about terminological confusion in the field. **Paper:** [link forthcoming](#).
+## Authors
 
-4. **The schema** (`CLAUDE.md` + `.claude/skills/`) — conventions, templates, and workflows that govern how the LLM operates on the wiki. This is the reusable machinery.
+| Author | Affiliation | Contact |
+|--------|-------------|---------|
+| [Ahmad Alismail](https://www.linkedin.com/in/ahmadalismail1/) | Heilbronn University | ahmad.alismail@hs-heilbronn.de |
+| [Woldai Betiel](https://www.linkedin.com/in/betiel-woldai-019436134/) | Ansbach University | b.woldai@hs-ansbach.de |
+| [Prof. Carsten Lanquillon](https://www.linkedin.com/in/prof-dr-carsten-lanquillon-76791061/) | Heilbronn University · [COAI Research](https://coairesearch.org/about/) | carsten@coairesearch.org |
+| [Prof. Sigurd Schacht](https://www.linkedin.com/in/prof-dr-sigurd-schacht-824a8516/) | Ansbach University · [COAI Research](https://coairesearch.org/about/) | sigurd@coairesearch.org |
+
+## What's in This Repo
+
+| | | |
+|---|---|---|
+| 📚 **The wiki** (`wiki/`) | An LLM-maintained knowledge base built incrementally from 84 AI safety sources: **774 interlinked pages** (189 concepts, plus source summaries, entity profiles, debates, evidence maps, methods, findings, and open questions) connected by **7,583 wikilinks**. | Start at `wiki/index.md` |
+| 📄 **The raw sources** (`raw/`) | The markdown the wiki was built from. Source PDFs are **not redistributed** (copyright) — `raw/papers/` holds each source's Marker-converted markdown, and `staging-area/` holds PDFs before conversion. Add your own to reproduce or extend. | See [Setup](#setup) |
+| 🧩 **The schema** (`CLAUDE.md` + `.claude/skills/`) | Conventions, page templates, and workflows that govern how the LLM operates on the wiki. This is the reusable machinery — point it at a different field and it works the same way. | See [How It Works](#how-it-works) |
+| 📝 **The paper** | The academic write-up of the method and findings: what the wiki revealed about terminological confusion in the field. | [link forthcoming](#) |
 
 ## Wiki Contents
 
-The wiki was built by ingesting 84 AI safety sources one at a time. Each source typically touched 10+ wiki pages. The scope after ingestion:
+The wiki was built by ingesting 84 sources one at a time. Each source typically touched 10+ pages. After ingestion:
 
 | Page Type | Count | Description |
-|-----------|-------|-------------|
+|-----------|------:|-------------|
 | Sources | 84 | One summary per ingested paper/article |
-| Concepts | 189 | One page per AI safety concept, with definitions from each source |
+| Concepts | 189 | One page per AI safety concept, with each source's definition |
 | Entities | 191 | Authors, labs, and research groups |
 | Findings | 176 | Key results extracted across sources |
 | Methods | 73 | Evaluation methods and methodologies |
-| Open questions | 51 | Open research questions and gaps |
-| Debates | 7 | Dedicated disagreement pages where sources conflict |
+| Open questions | 51 | Research questions and gaps |
+| Debates | 7 | Dedicated pages where sources conflict |
 | Evidence maps | 3 | Structured evidence for/against specific claims |
-| **Total pages** | **774** | Connected by **7,583** cross-references (wikilinks) |
+| **Total** | **774** | Connected by **7,583** cross-references (wikilinks) |
 
-Start with `wiki/index.md` for a full catalog, or `wiki/overview.md` for a high-level synthesis.
+Start with `wiki/index.md` for the full catalog, or `wiki/overview.md` for a high-level synthesis.
 
 ### Browsing the Wiki
 
-The wiki uses Obsidian-style wikilinks (`[[concepts/power-seeking]]`), so **we recommend opening `wiki/` as a vault in [Obsidian](https://obsidian.md/)**. Graph view and backlinks work out of the box, making it easy to navigate the 774 interlinked pages.
-
-Any markdown editor works for reading, but Obsidian gives you the full cross-referencing experience.
-
-
+The wiki uses Obsidian-style wikilinks (`[[concepts/power-seeking]]`), so we recommend opening `wiki/` as a vault in **[Obsidian](https://obsidian.md/)** — graph view and backlinks work out of the box, making the 774 interlinked pages easy to navigate. Any markdown editor works for plain reading, but Obsidian gives you the full cross-referencing experience.
 
 ## How It Works
 
-The core idea: instead of retrieving from raw documents at query time (like RAG), the LLM **incrementally builds and maintains a persistent wiki**. When you add a new source, the LLM reads it, extracts structured data, and integrates it into the existing wiki — updating concept pages, revising summaries, flagging contradictions, and strengthening or challenging the evolving synthesis.
+Instead of retrieving from raw documents at query time (like RAG), the LLM **incrementally builds and maintains a persistent wiki**. When you add a source, the LLM reads it, extracts structured data, and integrates it into the existing wiki — updating concept pages, revising summaries, flagging contradictions, and strengthening or challenging the evolving synthesis.
 
 ### Architecture
 
@@ -67,19 +71,20 @@ Three layers. The human owns the top and bottom; the LLM owns the middle.
 ├─────────────────────────────────────────────────────┤
 │                    Wiki Layer                        │
 │                      wiki/                           │
-│  LLM-generated markdown. The LLM owns this layer.   │
+│   LLM-generated markdown. The LLM owns this layer.   │
 ├─────────────────────────────────────────────────────┤
-│                 Raw Source Layer                      │
+│                 Raw Source Layer                     │
 │                      raw/                            │
 │  Immutable source documents. You add these.          │
 └─────────────────────────────────────────────────────┘
 ```
 
-- **Schema** — `CLAUDE.md` defines page types, frontmatter conventions, and domain-specific guidance. `.claude/skills/` defines workflows like `/ingest` and `/query`. 
-- **Wiki** — the LLM creates, updates, and maintains all files in `wiki/`. Source summaries, concept pages, entity profiles, debates, evidence maps, and more. 
-- **Raw sources** — papers, articles, reports, transcripts. The LLM reads from these but never modifies them. This is our source of truth.
+- **Schema** — `CLAUDE.md` defines page types, frontmatter, and domain guidance; `.claude/skills/` defines workflows like `/ingest` and `/query`.
+- **Wiki** — the LLM creates, updates, and maintains everything in `wiki/`: source summaries, concept pages, entity profiles, debates, evidence maps, and more.
+- **Raw sources** — papers, articles, reports, transcripts. The LLM reads them but never modifies them. This is the source of truth.
 
 ### Directory Layout
+
 ```
 wiki/                 # LLM-generated knowledge base (774 pages)
   index.md            #   content catalog — start here
@@ -110,18 +115,18 @@ CLAUDE.md             # Schema — conventions, templates, domain guidance
 ### Prerequisites
 
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (CLI, desktop app, or IDE extension)
-- [uv](https://docs.astral.sh/uv/) for Python dependency management (PDF conversion)
-- [Obsidian](https://obsidian.md/) (optional — for browsing the wiki with graph view and backlinks)
-- CUDA-capable GPU (optional — for PDF conversion with Marker)
+- [uv](https://docs.astral.sh/uv/) — Python dependency management for PDF conversion
+- [Obsidian](https://obsidian.md/) — optional, for browsing with graph view and backlinks
+- A CUDA-capable GPU — optional, for PDF conversion with Marker
 
 ### Quick Start
 
-1. **Fork or clone** this repo
-2. **Install dependencies** — run `uv sync` to install PDF conversion tools (Marker, PyTorch, etc.)
+1. **Fork or clone** this repo.
+2. **Install dependencies** — `uv sync` installs the PDF conversion tools (Marker, PyTorch, etc.).
 3. **Edit `CLAUDE.md`** — replace the Domain-Specific Guidance section with guidance for your research area. The file includes a framework and a worked example to follow.
-4. **Convert a PDF** — drop a PDF into `staging-area/`, convert it to markdown (see PDF Conversion below), or add your own source to `raw/articles/`
-5. **Run `/ingest raw/papers/your-source.md`** in Claude Code
-6. **Browse the wiki** — open `wiki/` in Obsidian or any markdown editor
+4. **Add a source** — drop a PDF into `staging-area/` and convert it (see below), or add markdown directly to `raw/articles/`.
+5. **Run `/ingest raw/papers/your-source.md`** in Claude Code.
+6. **Browse the wiki** — open `wiki/` in Obsidian or any markdown editor.
 
 ### PDF Conversion
 
@@ -134,36 +139,29 @@ uv run marker_single path/to/paper.pdf --output_dir raw/papers
 
 ## Workflows
 
-All workflows are implemented as [Claude Code skills](https://docs.anthropic.com/en/docs/claude-code/skills) (`.claude/skills/`) and run as slash commands inside Claude Code.
+All workflows are [Claude Code skills](https://docs.anthropic.com/en/docs/claude-code/skills) (`.claude/skills/`) that run as slash commands inside Claude Code.
 
-### `/ingest [path]`
+| Command | What it does |
+|---------|--------------|
+| **`/ingest [path]`** | Two-pass ingestion with a human review gate. The LLM extracts structured data (metadata, concepts, claims, methodology, entities), presents the extract for approval, then integrates it — touching 10+ wiki pages per source. |
+| **`/ingest-agentic [path]`** | Same two-pass workflow, but an AI review agent replaces the human gate (up to 2 re-review passes). Use for batch ingestion. |
+| **`/ingest-agentic-op [path]`** | Token-optimized variant of `/ingest-agentic` (~89% fewer review-agent tokens via temp files, concept pre-filtering, and scoped re-reviews). Same output quality — the default for autonomous ingestion. |
+| **`/query [question]`** | Reads relevant pages and synthesizes a cited answer. Saved to `wiki/output/queries/` so explorations compound. |
+| **`/lint`** | Health check: orphan pages, broken wikilinks, missing definitions, out-of-sync index, and more. Suggested every 10 ingests via a post-commit hook; schedulable with `/schedule`. |
+| **`/compare [topic]`** | Generates a cross-source comparison table with analysis. Saved to `wiki/comparisons/`. |
+| **`/discover [query]`** | Searches the web for relevant papers, dedupes against existing sources, and downloads accepted PDFs to `staging-area/` with standardized naming. |
 
-Two-pass source ingestion with human review. The LLM reads the source, extracts structured data (metadata, concepts, claims, methodology, entities), and presents the extract for your approval. After review, it integrates the extract into the wiki — creating or updating source summaries, concept pages, entity profiles, debate pages, and evidence maps. A single source typically touches 10+ wiki pages.
+## About COAI Research
 
-### `/ingest-agentic [path]`
+[COAI Research](https://coairesearch.org) is a non-profit AI research institute based in Germany. Its mission is to ensure advanced AI systems remain aligned with human values — transparent, controllable, and beneficial for society.
 
-Same two-pass workflow as `/ingest`, but an AI review agent replaces the human approval gate. The agent validates the extract for completeness, accuracy, and fidelity to the source, with up to 2 re-review passes if issues are found. Use this for batch ingestion when you don't need to review each source individually.
+Its work spans:
 
-### `/ingest-agentic-op [path]`
+- AI safety and alignment
+- Mechanistic interpretability
+- Human–AI collaboration
+- AI governance and risk assessment
 
-Token-optimized variant of `/ingest-agentic`. Reduces review-agent token consumption by ~89% through temp files, concept pre-filtering, and scoped re-reviews. Same output quality — use this as the default for autonomous ingestion.
+COAI researches how to detect, understand, and control AI behavior, and how humans and AI can work together safely and effectively.
 
-### `/query [question]`
-
-Ask questions against the wiki. The LLM reads relevant concept pages, debates, evidence maps, and source summaries, then synthesizes a cited answer. Answers are saved to `wiki/output/queries/` so your explorations compound in the knowledge base.
-
-### `/lint`
-
-Wiki health check. Scans for orphan pages, broken wikilinks, missing concept definitions, out-of-sync index entries, and other structural issues. Reports findings grouped by category and offers to fix them. Automatically suggested every 10 ingests via a post-commit hook. Can also be scheduled on a daily or weekly cron with `/schedule` (a built-in Claude Code command).
-
-### `/compare [topic]`
-
-Generates comparison tables across sources for a given topic. Reads relevant concept, source, and method pages, identifies meaningful dimensions of difference, and produces a markdown table with analysis. Saved to `wiki/comparisons/`.
-
-### `/discover [query]`
-
-Searches the internet for research papers relevant to your wiki's domain. Builds a dedup index from existing sources to avoid duplicates, runs web searches, presents results for your review, and downloads accepted PDFs to `staging-area/` with standardized naming for subsequent ingestion.
-
-## Browsing
-
-Open the `wiki/` folder as a vault in [Obsidian](https://obsidian.md/). The wiki uses Obsidian-style wikilinks (`[[concepts/some-concept]]`), so graph view and backlinks work out of the box.
+🔗 [coairesearch.org](https://coairesearch.org)
