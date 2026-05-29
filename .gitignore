@@ -1,0 +1,15 @@
+.obsidian/
+tools/.venv/
+__pycache__/
+*.pyc
+.env
+
+# Local Claude Code config (machine-specific paths/permissions — never commit)
+.claude/settings.local.json
+
+# Wiki scratch / working files
+wiki/.meta/tmp-*
+wiki/.meta/fact-check-*
+
+# History-rewrite backups
+*.bundle

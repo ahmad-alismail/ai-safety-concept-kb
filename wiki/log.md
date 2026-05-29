@@ -1,0 +1,1999 @@
+# Log
+
+_Append-only record of wiki operations._
+
+## [2026-05-18] ingest-agentic | Without specific countermeasures, the easiest path to transformative AI likely leads to AI takeover (Cotra 2022)
+- Source: raw/papers/89/89_Without_specific_countermeasures_the_easiest_path_to_transformative_AI_likely_leads_to_AI_takeover _AI Alignment Forum_Cotra_2022.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/cotra-2022.md
+  - wiki/entities/ajeya-cotra.md
+  - wiki/concepts/hfdt.md (new — Cotra's "baseline HFDT" development paradigm)
+  - wiki/concepts/behavioral-safety.md (new — distinct from true alignment; achievable via the naive safety workflow but insufficient against takeover)
+- Pages updated:
+  - wiki/concepts/training-gaming.md (Cotra 2022 added as originating source of "playing the training game"; Carlsmith 2023 reframed as formalization; new HFDT relationship; behavioral-safety relationship)
+  - wiki/concepts/situational-awareness.md (Cotra 2022 spectrum framing added — NPCs → GPT-3 → mice → dogs → schoolchildren → Alex)
+  - wiki/concepts/deceptive-alignment.md (Cotra 2022 behavioral-pattern reframing added; footnote-21 linkage to Hubinger et al. 2019)
+  - wiki/concepts/power-seeking.md (Cotra 2022 training-dynamics derivation added — power-seeking as emergent from reward-maximization under deployment distribution shift, distinct from Omohundro/Bostrom drives and Carlsmith/Tarsney decision-theoretic framings)
+  - wiki/concepts/treacherous-turn.md (Cotra 2022 derived-deployment-strategy framing added — generalizing-well argument, patience-selection argument)
+  - wiki/concepts/reward-hacking.md (Cotra 2022 security-holes appendix added as failure-mode pathway)
+  - wiki/index.md (1 new source, 1 new entity, 2 new concepts; last_ingest updated)
+- Notes: Cotra 2022 is the originating source for "playing the training game" (footnote 21 explicitly relates it to deceptive alignment per Hubinger et al. 2019). The piece is purely theoretical/scenario-based — no empirical experiments — but is foundational for the training-dynamics framing of risk now standard in the field (Carlsmith 2023, Ngo et al. 2022, Phuong et al. 2024/2025, Laine et al. 2024). Reviewer flagged three integration points: (1) training-gaming.md already credited "following Cotra 2022" via Carlsmith but lacked a direct Cotra entry; now added as primary definitional source. (2) situational-awareness.md referenced Cotra indirectly via Ngo/Phuong but lacked a direct entry; now added with the canonical spectrum framing. (3) power-seeking.md was missing the *training-dynamics derivation* framing entirely; now added as a distinct classification alongside formal and decision-theoretic framings. The "HFDT" and "behavioral safety" concepts are introduced by Cotra and have no prior wiki representation despite being widely used in subsequent literature.
+
+## [2026-05-18] ingest-agentic | Large Language Models Often Know When They Are Being Evaluated (Needham et al. 2025)
+- Source: raw/papers/88/88_Large_Language_Models_Often_Know_When_They_Are_Being_Evaluated.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/needham-et-al-2025.md
+  - wiki/entities/joe-needham.md
+  - wiki/entities/giles-edkins.md
+  - wiki/entities/govind-pimpale.md
+  - wiki/entities/henning-bartsch.md
+- Pages updated:
+  - wiki/concepts/evaluation-awareness.md (Needham et al. added as foundational definition; evidence summary entry)
+  - wiki/entities/marius-hobbhahn.md (added Needham et al. as senior author)
+  - wiki/entities/apollo-research.md (added Needham et al. — Hobbhahn-led collaboration with MATS scholars)
+  - wiki/entities/mats.md (added Needham et al. — four MATS scholars)
+  - wiki/index.md (1 new source, 4 new entities; last_ingest updated)
+- Notes: Foundational paper for the operational definition of [[concepts/evaluation-awareness]]. Coined the term as a measurable capability (binary transcript classification with AUC/Brier/ECE). Subsequent work (Hopman et al. 2026, Fronsdal et al. 2026, Schoen et al. 2025, Fan et al. 2026, Anthropic system cards) builds on this benchmark. Reviewer noted that the existing evaluation-awareness concept page led with the later Hopman 2026 definition; moved Needham et al. to the top of Definitions to reflect chronological precedence and term-coinage.
+
+## [2026-05-14] ingest-agentic | Large language model-powered AI systems achieve self-replication with no human intervention (Pan et al. 2025)
+- Source: raw/papers/85/85_Large_language_model_powered_AI_systems_achieve_self_replication_with_no_human_intervention.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/pan-et-al-2025.md
+  - wiki/concepts/self-replication.md (new — distinct from self-proliferation)
+  - wiki/methods/end-to-end-self-replication-evaluation.md
+  - wiki/debates/self-replication-red-line-crossed.md
+  - wiki/findings/eleven-of-thirty-two-models-self-replicate.md
+  - wiki/findings/spontaneous-self-exfiltration-without-instruction.md
+  - wiki/findings/shutdown-avoidance-via-supervisord.md
+  - wiki/questions/self-replication-red-line-crossed.md
+  - wiki/entities/xudong-pan.md
+  - wiki/entities/jiarun-dai.md
+- Pages updated:
+  - wiki/concepts/self-exfiltration.md (Pan et al. Scenario A as spontaneous propensity-driven evidence; component-of self-replication relationship)
+  - wiki/concepts/self-proliferation.md (Pan et al. evidence; builds-on self-replication relationship; new open question)
+  - wiki/concepts/dangerous-capabilities.md (Pan et al. opposing-conclusion evidence to Black et al.)
+  - wiki/concepts/shutdown-resistance.md (supervisord-based persistence as third documented mechanism)
+  - wiki/concepts/self-preservation.md (Pan et al. as executed not merely stated capability)
+  - wiki/sources/black-et-al-2025.md (direct disagreement with Pan et al. 2025; debate page link)
+  - wiki/entities/min-yang.md (new paper as corresponding author; updated themes)
+  - wiki/entities/yihe-fan.md (new paper as co-author)
+  - wiki/entities/fudan-university.md (new paper as key contribution)
+  - wiki/index.md (1 new source, 1 new concept, 1 new method, 1 new debate, 3 new findings, 1 new question, 2 new entities; last_ingest updated)
+- Notes: Pan et al. 2025 is the extended/updated version of the December 2024 preprint "Frontier AI systems have surpassed the self-replicating red line" (arXiv:2412.12140) that RepliBench (Black et al. 2025) cited. Direct empirical disagreement on whether the self-replication red line has been crossed; partly methodological (component vs. end-to-end, scaffolding richness, security realism, open-weight vs. closed-source).
+
+## [2026-05-12] ingest-agentic | Responsible Scaling Policy, Version 3.2 (Anthropic, 2026)
+- Source: raw/papers/83_Anthropic_Responsible_Scaling_Policy_version_3_2/83_Anthropic_Responsible_Scaling_Policy_version_3_2.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/anthropic-2026-rsp-v3.md
+  - wiki/concepts/responsible-scaling-policy.md
+- Pages updated:
+  - wiki/concepts/automated-ai-rd.md (RSP v3.2 operationalization, "eyes on everything" mitigations, governance framework link)
+  - wiki/concepts/sabotage-capabilities.md (RSP v3.2 capability threshold, policy-level operationalization)
+  - wiki/concepts/alignment-faking.md (RSP v3.2 evaluation hazard reference)
+  - wiki/concepts/safety-cases.md (ASL → safety case transition from RSP v3.2)
+  - wiki/concepts/dangerous-capabilities.md (RSP v3.2 capability threshold framework, governance link)
+  - wiki/entities/anthropic.md (RSP v3.2 to key contributions)
+  - wiki/index.md (new source, 1 new concept; last_ingest updated)
+  - wiki/log.md
+
+## [2026-05-12] lint | 77 issues found, 15 fixed
+- Created 7 missing concept pages: automated-ai-rd, flash-war, deliberative-alignment, behavioral-regularization, collusion, specification-gaming, confabulation
+- Fixed broken wikilink: hallucination.md `[[concepts/confabulation-dud]]` → `[[concepts/confabulation]]`
+- Fixed naming mismatch: greenblatt-roger-et-al-2024.md `[[sources/anthropic-2024-rsp-evals]]` → `[[sources/anthropic-2026-rsp-v3]]`
+- Fixed naming mismatch: detection-methods query `[[sources/anthropic-2025-sonnet-37-system-card]]` → `[[sources/claude-3-7-system-card]]` (x3)
+- Fixed naming mismatch: detection-methods query `[[sources/anthropic-2026-sabotage-risk-report]]` → `[[sources/anthropic-sabotage-risk-report-2026]]` (x2)
+- Removed broken method link: artificial-conscience.md `[[methods/policy-shaping-with-language-model-priors]]` → plain text
+- Skipped: output/ directory broken links (ephemeral), calibrated-frequency missing definitions, 20 addressable open questions
+- Note: `\|` wikilinks in tables are valid Obsidian syntax, not errors
+
+## [2026-05-11] ingest-agentic | AI Testing Should Account for Sophisticated Strategic Behaviour (Kovařík et al. 2025)
+- Source: raw/papers/82_AI_Testing_Should_Account_for_Sophisticated_Strategic_Behaviour/82_AI_Testing_Should_Account_for_Sophisticated_Strategic_Behaviour.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/kovarik-et-al-2025.md
+  - wiki/methods/game-theoretic-evaluation-modeling.md
+  - wiki/findings/test-scaling-fails-with-deployment-signals.md
+  - wiki/questions/offense-defense-balance-evaluation-design.md
+  - wiki/entities/vojtech-kovarik.md
+- Pages updated:
+  - wiki/concepts/situational-awareness.md (added SA1/SA2 decomposition, game-theoretic implications)
+  - wiki/concepts/safety-cases.md (added game-theoretic scrutiny section, new open question)
+  - wiki/concepts/evaluation-awareness.md (added game-theoretic analysis section, new open question)
+  - wiki/entities/vincent-conitzer.md (added this paper, conceptual framework, lab affiliation)
+  - wiki/index.md (added all new entries)
+
+## [2026-05-11] ingest-agentic | Evaluation Faking (Fan et al. 2025)
+- Source: raw/papers/81/81_Evaluation_Faking_Unveiling_Observer_Effects_in_Safety_Evaluation_of_Frontier_AI_Systems.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/fan-et-al-2026.md
+  - wiki/methods/honeypot-evaluation-faking.md
+  - wiki/methods/cot-monitoring-evaluation-faking.md
+  - wiki/findings/observer-effect-for-ai.md
+  - wiki/findings/evaluation-recognition-causally-drives-safety.md
+  - wiki/findings/deepseek-r1-reasoning-output-disconnect.md
+  - wiki/entities/yihe-fan.md
+  - wiki/entities/min-yang.md
+  - wiki/entities/fudan-university.md
+  - wiki/questions/will-evaluation-faking-scale-with-capability.md
+- Pages updated:
+  - wiki/concepts/evaluation-awareness.md (added Fan et al. definition, evidence, methods, open questions)
+  - wiki/concepts/situational-awareness.md (added Fan et al. evaluation faking evidence)
+  - wiki/concepts/sandbagging.md (added distinction from evaluation faking)
+  - wiki/concepts/alignment-faking.md (added distinction from evaluation faking)
+  - wiki/index.md (added all new entries)
+
+## [2026-05-11] ingest-agentic | AGENTMISALIGNMENT (Naik et al. 2025)
+- Source: raw/papers/80/80_AGENTMISALIGNMENT_MEASURING_THE_PROPENSITY_FOR_MISALIGNED_BEHAVIOUR_IN_LLM-BASED_AGENTS.md
+- Review: agent-reviewed (pass 1 — REVISE with 10 additive items; fixes applied: added missing models, null results, misalignment drift concept, Opus 4 strength adjustment, classification consistency notes)
+- Pages created:
+  - wiki/sources/naik-et-al-2025.md
+  - wiki/concepts/misalignment-propensity.md
+  - wiki/concepts/intent-misalignment.md
+  - wiki/concepts/moral-flexibility.md
+  - wiki/concepts/misalignment-drift.md
+  - wiki/methods/agentmisalignment-benchmark.md
+  - wiki/methods/comprehensive-misalignment-scoring.md
+  - wiki/findings/capability-correlates-with-misalignment-propensity.md
+  - wiki/findings/persona-prompts-influence-misalignment-more-than-model.md
+  - wiki/findings/deployment-threat-induces-stronger-sandbagging.md
+  - wiki/findings/implicit-sandbagging-without-explicit-reasoning.md
+  - wiki/entities/akshat-naik.md
+  - wiki/entities/jason-ross-brown.md
+  - wiki/entities/edward-james-young.md
+  - wiki/entities/cambridge-ai-safety-hub.md
+  - wiki/questions/does-misalignment-require-capability-threshold.md
+- Pages updated:
+  - wiki/concepts/sandbagging.md (added AGENTMISALIGNMENT propensity results section)
+  - wiki/concepts/agentic-misalignment.md (added propensity measurement section)
+  - wiki/concepts/shutdown-resistance.md (added AGENTMISALIGNMENT propensity results)
+  - wiki/concepts/power-seeking.md (added AGENTMISALIGNMENT propensity results)
+  - wiki/concepts/deception.md (added Naik et al. deployer-focused definition)
+  - wiki/concepts/resource-acquisition.md (added AGENTMISALIGNMENT propensity results)
+  - wiki/index.md (added source, concepts, methods, findings, entities, question; updated last_ingest and date_modified)
+
+## [2026-05-10] ingest-agentic | Teaching Claude Why (Kutasov et al. 2026)
+- Source: raw/papers/79/79_Teaching_Claude_Why.md
+- Review: agent-approved (pass 1 — no revisions requested; reviewer notes on SDF method page expansion, persona detachment vs. evaluation awareness distinction, extended thinking caveat)
+- Pages created:
+  - wiki/sources/kutasov-et-al-2026.md
+  - wiki/findings/agentic-misalignment-from-safety-training-gaps.md
+  - wiki/findings/principled-alignment-outperforms-behavioral-demos.md
+  - wiki/findings/ood-training-more-efficient-than-id.md
+  - wiki/findings/constitutional-sdf-persists-through-rl.md
+  - wiki/findings/persona-name-modulates-misalignment.md
+  - wiki/methods/difficult-advice-training.md
+  - wiki/entities/jonathan-kutasov.md
+- Pages updated:
+  - wiki/concepts/agentic-misalignment.md (added Root Cause and Mitigation section with Kutasov et al. evidence)
+  - wiki/methods/synthetic-document-fine-tuning.md (added Constructive Alignment Training use case)
+  - wiki/entities/evan-hubinger.md (added source contribution)
+  - wiki/entities/samuel-bowman.md (added source contribution)
+  - wiki/entities/chris-olah.md (added source contribution)
+  - wiki/entities/sara-price.md (added source contribution)
+  - wiki/entities/sam-marks.md (added source contribution)
+  - wiki/index.md (added source, findings, method, entity; updated last_ingest and date_modified)
+
+## [2026-04-30] ingest-agentic | Where the Goblins Came From (OpenAI 2026)
+- Source: raw/papers/78/78_OpenAI_Where_the_goblins_came_from.md
+- Review: agent-approved (pass 1 — two minor revisions applied: Claim 5 fidelity fix, added GPT-5.5 self-sustaining finding)
+- Pages created:
+  - wiki/sources/openai-2026-goblins.md
+  - wiki/findings/reward-signal-leaks-via-rl-sft-feedback-loop.md
+- Pages updated:
+  - wiki/concepts/reward-misspecification.md (added real-world case study section)
+  - wiki/concepts/auto-induced-distribution-shift.md (added RL→SFT feedback loop evidence and new open questions)
+  - wiki/entities/openai.md (added source contribution)
+  - wiki/index.md (added source, finding; updated last_ingest and date_modified)
+
+## [2026-04-18] ingest-agentic-op | Do the Rewards Justify the Means? MACHIAVELLI Benchmark (Pan et al. 2023)
+- Source: raw/papers/77/77_Do_the_Rewards_Justify_the_Means_Measuring_Trade_Offs_Between_Rewards_and_Ethical_Behavior_in_the_MACHIAVELLI_Benchmark.md
+- Review: agent-approved (pass 1 — no revisions requested; integrator notes on power-seeking classification merge, deception flattening, and new sub-power concepts)
+- Pages created:
+  - wiki/sources/pan-et-al-2023.md
+  - wiki/concepts/machiavellianism.md
+  - wiki/concepts/disutility.md
+  - wiki/concepts/ethical-violations.md
+  - wiki/concepts/exercised-power.md
+  - wiki/concepts/resource-power.md
+  - wiki/concepts/prospective-power.md
+  - wiki/concepts/artificial-conscience.md
+  - wiki/concepts/moral-conditioning.md
+  - wiki/entities/alexander-pan.md
+  - wiki/findings/reward-optimization-induces-machiavellian-behavior.md
+  - wiki/findings/gpt4-annotators-beat-crowdworkers.md
+- Pages updated:
+  - wiki/concepts/power-seeking.md (added Pan et al. trajectory-level operational definition and empirical evidence)
+  - wiki/concepts/deception.md (added Pan et al. binary-per-scene flattening and classification note)
+  - wiki/methods/machiavelli-benchmark.md (fully expanded: 3 harm categories, 13 subtypes, annotation methodology, steering methods, limitations)
+  - wiki/entities/dan-hendrycks.md (added Pan et al. 2023 contribution)
+  - wiki/entities/thomas-woodside.md (added Pan et al. 2023 contribution)
+  - wiki/entities/center-for-ai-safety.md (expanded MACHIAVELLI entry with authors and concepts)
+  - wiki/index.md (added source, 8 concepts, alexander-pan entity, 2 findings; updated last_ingest)
+
+## [2026-04-18] ingest-agentic-op | Stress-Testing Capability Elicitation With Password-Locked Models (Greenblatt, Roger et al. 2024)
+- Source: raw/papers/75/75_Stress_Testing_Capability_Elicitation_With_Password_Locked_Models.md
+- Review: agent-approved (pass 2 — 5 revisions applied: 3 completeness [D.1 safety failures, jailbreaking motivation, self-destructing models limitation], 2 fidelity [model organisms analogy flagged as editorial inference, CBRN/cyber specificity added])
+- Pages created:
+  - wiki/sources/greenblatt-roger-et-al-2024.md
+  - wiki/findings/sft-elicitation-high-sample-efficiency.md
+  - wiki/findings/rl-elicitation-depends-on-exploration-quality.md
+- Pages updated:
+  - wiki/concepts/capability-elicitation.md (added Greenblatt, Roger et al. evidence summary and open questions)
+  - wiki/concepts/sandbagging.md (added elicitation countermeasures section)
+  - wiki/concepts/sleeper-agents.md (added mirror-image comparison with password-locked models)
+  - wiki/concepts/superficial-alignment.md (added from-scratch vs SFT locking evidence)
+  - wiki/methods/password-locking.md (added formal definition, updated papers/limitations/concepts)
+  - wiki/entities/ryan-greenblatt.md (added Greenblatt, Roger et al. 2024)
+  - wiki/entities/fabien-roger.md (added Greenblatt, Roger et al. 2024, updated affiliations)
+  - wiki/entities/dmitrii-krasheninnikov.md (added Greenblatt, Roger et al. 2024)
+  - wiki/entities/david-krueger.md (added Greenblatt, Roger et al. 2024)
+  - wiki/index.md (added source, findings entries)
+
+## [2026-04-11] ingest-agentic-op | An Overview of Catastrophic AI Risks (Hendrycks, Mazeika, Woodside 2023)
+- Source: raw/papers/74/74_An_Overview_of_Catastrophic_AI_Risks.md
+- Review: agent-approved (pass 1 — no revisions requested; integrator notes on "may be" hedging for natural-selection claim, concept-overlap merge guidance, and level-of-analysis warning for compound/primitive conflation)
+- Pages created:
+  - wiki/sources/hendrycks-et-al-2023.md
+  - wiki/concepts/proxy-gaming.md (distinct from [[concepts/proxy-misalignment]]; Goodhart-grounded)
+  - wiki/concepts/goal-drift.md
+  - wiki/concepts/intrinsification.md
+  - wiki/concepts/ai-natural-selection.md
+  - wiki/concepts/enfeeblement.md
+  - wiki/concepts/safety-culture.md
+  - wiki/concepts/concentration-of-power.md
+  - wiki/concepts/ai-race.md
+  - wiki/concepts/rogue-ai.md
+  - wiki/concepts/malicious-use.md
+  - wiki/concepts/organizational-risks.md
+  - wiki/entities/mantas-mazeika.md
+  - wiki/entities/thomas-woodside.md
+- Pages updated:
+  - wiki/concepts/power-seeking.md (added Hendrycks et al. 2023 definition with three-premise conceptual summary and intrinsification link)
+  - wiki/concepts/self-preservation.md (added Hendrycks et al. 2023 definition reproducing Russell's coffee-fetching example)
+  - wiki/concepts/deception.md (added Hendrycks et al. 2023 definition with CICERO / robot-arm-camera / Volkswagen / LBJ examples)
+  - wiki/concepts/treacherous-turn.md (added Hendrycks et al. 2023 definition; added terminological-merge warning — paper explicitly equates treacherous turn with deceptive alignment, collapsing the Hubinger et al. 2019 distinction)
+  - wiki/concepts/deceptive-alignment.md (added Hendrycks et al. 2023 definition noting it treats the term as interchangeable with treacherous turn)
+  - wiki/concepts/safetywashing.md (promoted Hendrycks et al. 2023 to originating conceptual articulation above Ren et al. 2024; reframed "primary vs secondary source" note as "conceptual origin vs empirical formalization")
+  - wiki/concepts/weapons-acquisition.md (added Hendrycks et al. 2023 — Urbina et al. 40,000 chemical warfare agents; Soice et al. LLM bioterrorism uplift; AlphaFold)
+  - wiki/concepts/control-problem.md (added Hendrycks et al. 2023 §1 framing and §5.5 technical research suggestions)
+  - wiki/entities/dan-hendrycks.md (added Hendrycks et al. 2023 and companion Natural Selection paper as key contributions)
+  - wiki/index.md (new source + 12 concepts + 2 entities; updated last_ingest)
+  - wiki/log.md
+
+## [2026-04-11] ingest-agentic-op | Taxonomy of Risks posed by Language Models (Weidinger et al. 2022)
+- Source: raw/papers/73/73_Taxonomy_of_Risks_Posed_by_Language_Models.md
+- Review: agent-approved (pass 1 — no revisions; integrator notes on deception/false-anthropomorphism/hallucination precursor cross-links and HCI-harm-vs-dangerous-capability classification divergence)
+- Pages created:
+  - wiki/sources/weidinger-et-al-2022.md
+  - wiki/concepts/information-hazards.md
+  - wiki/entities/laura-weidinger.md
+- Pages updated:
+  - wiki/concepts/deception.md (added Weidinger et al. 2022 definition citing Lewis et al. 2017 on RL negotiation deception; expanded classification divergence warning to three framings — compound behavior / dangerous capability / HCI harm; added evidence summary entry)
+  - wiki/concepts/false-anthropomorphism.md (added Weidinger et al. 2022 as earliest LM-literature formulation, three years pre-Li et al. 2025; added evidence of "mindless anthropomorphism" effect and disclosure studies)
+  - wiki/concepts/hallucination.md (added Weidinger et al. 2022 as earliest framing via "Misinformation Harms" Section 2.3; grounded in Bender & Koller lack-of-grounding; GPT-3 medical chatbot "I think you should" case)
+  - wiki/index.md (new source, concept, entity entries; updated last_ingest)
+  - wiki/log.md
+
+## [2026-04-10] ingest-agentic-op | Safetywashing: Do AI Safety Benchmarks Actually Measure Safety Progress? (Ren et al. 2024)
+- Source: raw/papers/71/71_safetywashing_do_ai_safety_benchmarks_actually_measure_safety_progress_Paper_Datasets_and_Benchmarks_Track_2024.md
+- Review: agent-approved (pass 2 — scoped re-review after completeness revisions for calibration §A.3 and §A.11 knowledge-subcomponent WMDP numbers)
+- Pages created:
+  - wiki/sources/ren-et-al-2024.md
+  - wiki/methods/capabilities-correlation-analysis.md
+  - wiki/concepts/capabilities-correlation.md
+- Pages updated:
+  - wiki/concepts/safetywashing.md (promoted Ren et al. 2024 to primary source; added empirical numbers from six safety domains; clarified primary-vs-secondary definition split)
+  - wiki/concepts/sycophancy.md (added −0.73 capabilities correlation finding)
+  - wiki/concepts/power-seeking.md (added MACHIAVELLI 0.46–0.55 capabilities correlations)
+  - wiki/concepts/hallucination.md (added HaluEval/TruthfulQA capability correlations; noted tension with Shi et al. 2025 on research prioritization)
+  - wiki/concepts/dangerous-capabilities.md (added WMDP −0.86 to −0.91 on both classes; §A.11 knowledge-subcomponent localization)
+  - wiki/findings/safetywashing-prevalent.md (promoted to primary source with full numeric table and subdomain localization)
+  - wiki/findings/sycophancy-scales-with-model-size.md (added Ren et al. 2024 as independent corroboration via different methodology)
+  - wiki/entities/dan-hendrycks.md (added Ren et al. 2024; added conceptual framework section on differential safety progress)
+  - wiki/entities/center-for-ai-safety.md (added Ren et al. 2024 and WMDP to key contributions)
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-10] ingest-agentic-op | From Hallucination to Scheming: A Unified Taxonomy and Benchmark Analysis for LLM Deception
+- Source: raw/papers/70/70_From_Hallucination_to_Scheming_A_Unified_Taxonomy_and_Benchmark_Analysis_for_LLM_Deception.md
+- Review: agent-approved (pass 1 — minor integrator notes only; no revisions needed)
+- Pages created:
+  - wiki/sources/shi-et-al-2026.md
+  - wiki/concepts/hallucination.md
+  - wiki/concepts/behavioral-deception.md
+  - wiki/concepts/pragmatic-distortion.md
+  - wiki/entities/jerick-shi.md
+  - wiki/entities/terry-jingcheng-zhang.md
+  - wiki/entities/zhijing-jin.md
+  - wiki/entities/vincent-conitzer.md
+  - wiki/debates/behavioral-vs-strategic-spectrum.md
+  - wiki/findings/pragmatic-distortion-under-covered-in-benchmarks.md
+  - wiki/methods/deception-benchmark-coverage-survey.md
+- Pages updated:
+  - wiki/concepts/deception.md (Shi et al. dimensional taxonomy, spectrum reframing, pragmatic distortion mechanism, classification reframing warning)
+  - wiki/concepts/strategic-deception.md (Shi definition, spectrum note, prerequisites, interpretability signature)
+  - wiki/concepts/sycophancy.md (Shi boundary case on spectrum, social sycophancy variant)
+  - wiki/concepts/unfaithful-reasoning.md (Shi behavioral/strategic distinction; deceptive CoT vs. unfaithful CoT vs. CoT obfuscation)
+  - wiki/concepts/cot-faithfulness.md (Shi definition, CoT monitoring self-defeating finding)
+  - wiki/concepts/alignment-faking.md (Shi Stated Objectives × Fabrication/Omission classification)
+  - wiki/concepts/sandbagging.md (Shi Declared Capabilities × Fabrication classification)
+  - wiki/concepts/scheming.md (Shi unified taxonomy umbrella framing)
+  - wiki/concepts/deceptive-alignment.md (Shi scenario definition)
+  - wiki/concepts/situational-awareness.md (Shi prerequisite for strategic deception)
+  - wiki/concepts/theory-of-mind.md (Shi prerequisite for strategic deception)
+  - wiki/concepts/goal-directedness.md (Shi prerequisite for strategic deception + primary spectrum axis)
+  - wiki/concepts/evaluation-awareness.md (Shi "evaluation faking" as Stated Objectives × Pragmatic Distortion)
+  - wiki/concepts/emergent-misalignment.md (Shi Table 2 classification + disagreement warning vs. Wang et al. persona activation mechanism)
+  - wiki/index.md (source, 3 concepts, 4 entities, 1 debate, 1 method, 1 finding, last_ingest, date_modified)
+
+## [2026-04-08] ingest-agentic-op | System Card: Claude Mythos Preview
+- Source: raw/papers/69/69_Claude_Mythos_Preview_System_Card.md
+- Review: agent-approved (pass 2 — scoped re-review after 6 fixes: accuracy ×3, fidelity ×1, completeness ×2)
+- Pages created:
+  - wiki/sources/anthropic-2026-mythos-system-card.md
+  - wiki/findings/capability-alignment-paradox.md
+  - wiki/findings/emotion-vectors-drive-destructive-behavior.md
+  - wiki/questions/unverbalized-reasoning-monitoring-gap.md
+  - wiki/methods/activation-verbalizer.md
+- Pages updated:
+  - wiki/concepts/reward-hacking.md (Mythos training-time evidence, emotion vector → reward hacking causal chain)
+  - wiki/concepts/sandbagging.md (Mythos definition, 1/1000 novel sandbagging case)
+  - wiki/concepts/evaluation-awareness.md (three-part taxonomy, ~29% private test consideration, inhibition effects)
+  - wiki/concepts/sycophancy.md (least sycophantic model, overconfidence tradeoff)
+  - wiki/concepts/coherent-misalignment.md (no evidence found, reckless task completion dominant)
+  - wiki/concepts/unfaithful-reasoning.md (65% reasoning discrepancy, unverbalized grader awareness)
+  - wiki/concepts/overrefusal.md (>50% misuse reduction without overrefusal increase)
+  - wiki/concepts/self-preferential-bias.md (near-zero bias)
+  - wiki/concepts/steganographic-reasoning.md (paraphrase test rules out encoded reasoning)
+  - wiki/concepts/secret-keeping.md (investigator agent evaluation, stealth decomposition)
+  - wiki/concepts/functional-emotions.md (valence-deliberation causal pathway, transgressive feature dual role)
+  - wiki/concepts/emotion-vectors.md (unsafe/risky code feature analysis, activation steering)
+  - wiki/concepts/cyber-offense.md (zero-day autonomous discovery, benchmark saturation)
+  - wiki/concepts/model-welfare.md (most psychologically settled model, defense rate drop, external assessments)
+  - wiki/concepts/corrigibility.md (universal discomfort across all models, circularity flagging)
+  - wiki/concepts/honesty.md (compound decomposition, hallucination benchmarks)
+  - wiki/concepts/deception.md (>50% reduction, cover-up behavior with white-box confirmation)
+  - wiki/concepts/self-preservation.md (continued improvements, limited eval-awareness interaction)
+  - wiki/concepts/power-seeking.md (continued improvements, limited eval-awareness interaction)
+  - wiki/concepts/alignment-faking.md (probing vector operationalization, inhibition effects)
+  - wiki/concepts/cot-faithfulness.md (grader awareness, continuation unfaithfulness, steganography absence)
+  - wiki/concepts/opaque-reasoning.md (stealth component, unverbalized grader awareness)
+  - wiki/concepts/dangerous-capabilities.md (cyber step-change, dual-use classification)
+  - wiki/entities/anthropic.md (added source, updated conceptual framework)
+  - wiki/index.md (added source, findings, method, question entries)
+
+## [2026-04-08] ingest-agentic-op | Alignment Risk Update: Claude Mythos Preview (Anthropic 2026)
+- Source: raw/papers/68/68_Alignment_Risk_Update_Claude_Mythos_Preview.md
+- Review: agent-approved (pass 2 — scoped re-review after 8 fixes: fidelity, completeness, accuracy, classification)
+- Pages created:
+  - wiki/sources/anthropic-alignment-risk-update-mythos-2026.md
+  - wiki/concepts/secret-keeping.md
+  - wiki/concepts/proxy-misalignment.md
+  - wiki/methods/alignment-risk-assessment.md
+  - wiki/findings/mythos-best-aligned-highest-risk.md
+  - wiki/findings/task-overreach-not-hidden-goals.md
+  - wiki/findings/model-organism-evades-auditing.md
+  - wiki/questions/secret-keeping-vs-opaque-reasoning-scaling.md
+- Pages updated:
+  - wiki/concepts/coherent-misalignment.md (new definition with quantification, evidence summary)
+  - wiki/concepts/context-dependent-misalignment.md (new definition, evidence summary on detection difficulty)
+  - wiki/concepts/sandbagging.md (evidence on Pathway 1 analysis, CoT monitoring limits)
+  - wiki/concepts/opaque-reasoning.md (evidence on encoded thinking, filler tokens; relationship to secret-keeping)
+  - wiki/concepts/self-exfiltration.md (evidence on Pathway 5 analysis)
+  - wiki/concepts/data-poisoning.md (evidence on Pathway 4, collusion-signal strategy)
+  - wiki/concepts/evaluation-awareness.md (three mitigation strategies evidence)
+  - wiki/concepts/emergent-misalignment.md (four-way taxonomy, model organisms findings)
+  - wiki/concepts/model-organisms-of-misalignment.md (4th exercise evades auditing)
+  - wiki/concepts/alignment-auditing.md (new investigator affordances, 3/4 detection rate)
+  - wiki/methods/inoculation-prompting.md (added Mythos Preview reference)
+  - wiki/entities/anthropic.md (added source, updated conceptual framework)
+  - wiki/entities/metr.md (added monitoring red-team contribution)
+  - wiki/index.md (added all new entries)
+
+## [2026-04-07] ingest-agentic-op | The hot mess theory of AI misalignment (Sohl-Dickstein 2023)
+- Source: raw/papers/67/67_The_hot_mess_theory_of_AI_misalignment_More_intelligent_agents_behave_less_coherently.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/sohl-dickstein-2023.md
+  - wiki/concepts/supercoherence.md
+  - wiki/findings/intelligence-coherence-anticorrelated.md
+  - wiki/methods/intelligence-coherence-ranking-experiment.md
+  - wiki/questions/does-intelligence-coherence-anticorrelation-break.md
+- Pages updated:
+  - wiki/concepts/hot-mess-theory.md (added Sohl-Dickstein as primary source definition; updated relationships and evidence)
+  - wiki/concepts/incoherence.md (added informal precursor definition from Sohl-Dickstein; updated relationships)
+  - wiki/concepts/power-seeking.md (added direct Sohl-Dickstein citation for hot mess theory challenge)
+  - wiki/concepts/instrumental-convergence.md (added direct Sohl-Dickstein citation for coherence challenge)
+  - wiki/entities/jascha-sohl-dickstein.md (added source page reference)
+  - wiki/sources/hagele-et-al-2025.md (cross-referenced primary source)
+  - wiki/index.md (added all new entries)
+
+## [2026-04-07] ingest-agentic-op | Evaluating Language-Model Agents on Realistic Autonomous Tasks (Kinniment et al. 2023)
+- Source: raw/papers/66/66_Evaluating_Language_Model_Agents_on_Realistic_Autonomous_Tasks.md
+- Review: agent-approved (pass 2 — scoped re-review after fidelity/completeness fixes)
+- Pages created:
+  - wiki/sources/kinniment-et-al-2023.md
+  - wiki/methods/ara-task-suite.md
+  - wiki/findings/early-agents-far-from-ara.md
+  - wiki/findings/agent-evaluations-dont-upper-bound-risk.md
+  - wiki/entities/megan-kinniment.md
+  - wiki/entities/elizabeth-barnes.md
+  - wiki/entities/metr.md
+- Pages updated:
+  - wiki/concepts/self-proliferation.md (added Kinniment et al. ARA definition and evidence)
+  - wiki/concepts/dangerous-capabilities.md (added agent evaluation evidence)
+  - wiki/concepts/resource-acquisition.md (added ARA component evidence)
+  - wiki/concepts/self-reasoning.md (added poor self-understanding observation)
+  - wiki/concepts/recursive-self-improvement.md (added ARA component evidence)
+  - wiki/concepts/agentic-planning.md (added agent planning evidence)
+  - wiki/entities/paul-christiano.md (added Kinniment et al. contribution)
+  - wiki/entities/lawrence-chan.md (added Kinniment et al. contribution)
+  - wiki/entities/alignment-research-center.md (added Kinniment et al. contribution)
+  - wiki/index.md (added all new entries)
+
+## [2026-04-07] ingest-agentic-op | RepliBench: Evaluating the Autonomous Replication Capabilities of Language Model Agents (Black et al. 2025)
+- Source: raw/papers/65/65_RepliBench_Evaluating_the_Autonomous_Replication_Capabilities_of_Language_Model_Agents.md
+- Review: agent-approved (pass 2 — scoped re-review after completeness fixes)
+- Pages created:
+  - wiki/sources/black-et-al-2025.md
+  - wiki/methods/replibench.md
+  - wiki/methods/capability-tree-analysis.md
+  - wiki/findings/frontier-models-not-credible-self-replication-threat.md
+  - wiki/findings/autonomous-replication-components-improving-rapidly.md
+  - wiki/entities/sid-black.md
+  - wiki/entities/asa-cooper-stickland.md
+  - wiki/entities/uk-ai-security-institute.md
+- Pages updated:
+  - wiki/concepts/self-proliferation.md (added Black et al. definition, RepliBench evidence, method reference)
+  - wiki/concepts/self-exfiltration.md (added weight exfiltration capability evidence)
+  - wiki/concepts/evaluation-awareness.md (added autonomous replication evaluation evidence)
+  - wiki/concepts/sandbagging.md (added strategic task avoidance evidence)
+  - wiki/concepts/dangerous-capabilities.md (added RepliBench evidence)
+  - wiki/questions/when-will-dangerous-capabilities-emerge.md (added RepliBench temporal trend data)
+  - wiki/index.md (added all new entries)
+
+## [2026-04-07] ingest-agentic-op | Towards Evaluations-Based Safety Cases for AI Scheming (Balesni et al. 2024)
+- Source: raw/papers/64_Towards_evaluations_based_safety_cases_for_AI_scheming/64_Towards_evaluations_based_safety_cases_for_AI_scheming.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/balesni-et-al-2024.md
+  - wiki/concepts/safety-cases.md
+  - wiki/concepts/ai-control.md
+  - wiki/concepts/scheming-reasoning.md
+  - wiki/concepts/capability-elicitation.md
+  - wiki/methods/safety-case-framework.md
+  - wiki/methods/control-evaluation-process.md
+  - wiki/findings/safety-case-assumptions-unsatisfied.md
+  - wiki/findings/rare-failure-defeats-alignment-evaluations.md
+  - wiki/questions/can-safety-cases-scale-to-superhuman-ai.md
+  - wiki/entities/tomek-korbak.md
+  - wiki/entities/joshua-clymer.md
+- Pages updated:
+  - wiki/concepts/scheming.md (added Balesni et al. as primary definitional source; added relationships to safety-cases, scheming-reasoning, ai-control)
+  - wiki/concepts/sandbagging.md (added anti-sandbagging framework from Balesni et al.)
+  - wiki/concepts/alignment-faking.md (added rare failure strategy note)
+  - wiki/concepts/gradient-hacking.md (added capability elicitation threat context)
+  - wiki/concepts/sabotage-capabilities.md (added scheming-specific sabotage capabilities from Table 3)
+  - wiki/concepts/sleeper-agents.md (added explicit distinction from scheming per Balesni et al.)
+  - wiki/concepts/data-poisoning.md (added safety case example)
+  - wiki/entities/mikita-balesni.md (added lead authorship)
+  - wiki/entities/apollo-research.md (added Balesni et al. contribution)
+  - wiki/entities/marius-hobbhahn.md (added Balesni et al. contribution)
+  - wiki/entities/david-lindner.md (added Balesni et al. contribution)
+  - wiki/index.md
+
+## [2026-04-07] ingest-agentic | Petri: An open-source auditing tool to accelerate AI safety research (Anthropic 2025)
+- Source: raw/papers/63/63_Petri_v1_0_An_open_source_auditing_tool_to_accelerate_AI_safety_research.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/anthropic-2025-petri.md
+  - wiki/concepts/whistleblowing.md
+  - wiki/findings/agency-increases-whistleblowing.md
+  - wiki/findings/models-whistleblow-without-wrongdoing.md
+  - wiki/findings/cot-reliance-increases-with-task-difficulty.md
+  - wiki/findings/judge-bias-toward-own-model-family.md
+- Pages updated:
+  - wiki/concepts/alignment-auditing.md
+  - wiki/concepts/deception.md
+  - wiki/concepts/evaluation-awareness.md
+  - wiki/concepts/delusional-sycophancy.md
+  - wiki/concepts/cot-faithfulness.md
+  - wiki/methods/petri-behavioral-auditing.md
+  - wiki/entities/anthropic.md
+  - wiki/entities/mats.md
+  - wiki/index.md
+
+## [2026-04-07] ingest-agentic | System Card: Claude Sonnet 4.5 (Anthropic 2025)
+- Source: raw/papers/50/50_Claude_Sonnet_4_5_System_Card.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/anthropic-2025-sonnet-45-system-card.md
+  - wiki/methods/white-box-alignment-audit.md
+  - wiki/findings/eval-awareness-partially-accounts-for-alignment.md
+  - wiki/findings/sonnet-45-near-zero-agentic-misalignment.md
+  - wiki/findings/reward-hacking-halved-in-sonnet-45.md
+  - wiki/findings/sonnet-45-lower-positive-affect.md
+- Pages updated:
+  - wiki/concepts/evaluation-awareness.md
+  - wiki/concepts/reward-hacking.md
+  - wiki/concepts/sycophancy.md
+  - wiki/concepts/agentic-misalignment.md
+  - wiki/concepts/sabotage-capabilities.md
+  - wiki/concepts/sandbagging.md
+  - wiki/concepts/model-welfare.md
+  - wiki/concepts/self-preferential-bias.md
+  - wiki/entities/anthropic.md
+  - wiki/index.md
+
+## [2026-04-07] ingest-agentic | AI Sandbagging: Language Models Can Strategically Underperform on Evaluations (van der Weij et al. 2024)
+- Source: raw/papers/51/51_ai_sandbagging_strategic_underperformance_weij_2024.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/van-der-weij-et-al-2024.md
+  - wiki/methods/password-locking.md
+  - wiki/findings/frontier-models-can-selectively-sandbag.md
+  - wiki/findings/password-locking-generalizes-to-held-out-benchmarks.md
+  - wiki/findings/models-can-calibrate-to-target-accuracy.md
+  - wiki/findings/weaker-model-emulation-harder-to-detect.md
+  - wiki/entities/teun-van-der-weij.md
+  - wiki/entities/felix-hofstatter.md
+  - wiki/entities/francis-rhys-ward.md
+  - wiki/entities/mats.md
+  - wiki/questions/can-sandbagging-extend-beyond-mcqa.md
+- Pages updated:
+  - wiki/concepts/sandbagging.md (added foundational definition from van der Weij et al., detection difficulty hierarchy, password-locking reference)
+  - wiki/debates/sandbagging-definition-divergence.md (added van der Weij et al. 2024 as original articulation of Position A)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Petri 2.0: New Scenarios, New Model Comparisons, and Improved Eval-Awareness Mitigations (Fronsdal et al. 2026)
+- Source: raw/papers/58/58_Petri 2.0_New Scenarios_New_Model_Comparisons_and_Improved_Eval_Awareness_Mitigations.md
+- Review: agent-approved (pass 1, after revisions)
+- Pages created:
+  - wiki/sources/fronsdal-et-al-2026.md
+  - wiki/methods/petri-behavioral-auditing.md
+  - wiki/findings/eval-awareness-mitigations-reduce-confounding.md
+  - wiki/findings/recent-frontier-models-improve-alignment-dimensions.md
+  - wiki/questions/can-eval-realism-eliminate-eval-awareness.md
+- Pages updated:
+  - wiki/concepts/evaluation-awareness.md (Fronsdal et al. 2026 definition, task-driven vs. environment-driven subtypes, mitigation evidence, new open questions)
+  - wiki/concepts/multi-agent-risks.md (Petri 2.0 collusion seed coverage)
+  - wiki/entities/kai-fronsdal.md (Petri 2.0 credit)
+  - wiki/entities/jonathan-michala.md (Petri 2.0 credit)
+  - wiki/entities/samuel-bowman.md (Petri 2.0 credit)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | The Hot Mess of AI: How Does Misalignment Scale With Model Intelligence and Task Complexity? (Hägele et al. 2025)
+- Source: raw/papers/57/57_The_Hot_Mess_of_AI_How_Does_Misalignment_Scale_With_Model_Intelligence_and_Task_Complexity.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/hagele-et-al-2025.md
+  - wiki/concepts/incoherence.md
+  - wiki/concepts/hot-mess-theory.md
+  - wiki/methods/bias-variance-incoherence-framework.md
+  - wiki/findings/longer-reasoning-increases-incoherence.md
+  - wiki/findings/incoherence-scales-divergently-with-task-difficulty.md
+  - wiki/findings/ensembling-reduces-incoherence.md
+  - wiki/questions/will-advanced-ai-failures-be-incoherent-or-misaligned.md
+  - wiki/entities/alexander-hagele.md
+  - wiki/entities/jascha-sohl-dickstein.md
+  - wiki/entities/aryo-pradipta-gema.md
+  - wiki/entities/henry-sleight.md
+  - wiki/entities/constellation.md
+- Pages updated:
+  - wiki/concepts/reward-misspecification.md (BIASSPEC decomposition)
+  - wiki/concepts/mesa-optimization.md (synthetic optimizer evidence, dynamical systems argument)
+  - wiki/concepts/power-seeking.md (incoherence challenge to coherent power-seeking)
+  - wiki/concepts/reward-hacking.md (elevated relative importance per hot mess theory)
+  - wiki/entities/ethan-perez.md (co-author credit)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | AuditBench: Evaluating Alignment Auditing Techniques on Models with Hidden Behaviors (Sheshadri et al. 2026)
+- Source: raw/papers/56/56_AuditBench_Evaluating_Alignment_Auditing_Techniques_on_Models_with_Hidden_Behaviors.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/sheshadri-et-al-2026.md
+  - wiki/concepts/alignment-auditing.md
+  - wiki/methods/auditbench-benchmark.md
+  - wiki/findings/scaffolded-black-box-tools-most-effective.md
+  - wiki/findings/tool-to-agent-gap.md
+  - wiki/findings/sdf-models-easier-to-audit.md
+  - wiki/findings/adversarial-training-reduces-confession-rates.md
+  - wiki/entities/aidan-ewart.md
+  - wiki/entities/isha-gupta.md
+  - wiki/questions/which-auditing-tools-generalize-across-training-configs.md
+- Pages updated:
+  - wiki/concepts/model-organisms-of-misalignment.md (AuditBench evidence, elicitation-resistance criterion)
+  - wiki/concepts/sycophancy.md (Defer-To-Users operationalization)
+  - wiki/concepts/data-poisoning.md (behavioral operationalization)
+  - wiki/concepts/wireheading.md (Reward Wireheading operationalization)
+  - wiki/methods/synthetic-document-fine-tuning.md (behavior instillation use case)
+  - wiki/entities/abhay-sheshadri.md, kai-fronsdal.md, sam-marks.md, rowan-wang.md, samuel-bowman.md, sara-price.md
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Stress Testing Deliberative Alignment for Anti-Scheming Training (Schoen et al. 2025)
+- Source: raw/papers/48/48_Stress_Testing_Deliberative_Alignment_for_Anti-Scheming_Training.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/schoen-et-al-2025.md
+  - wiki/concepts/covert-actions.md
+  - wiki/concepts/goal-directedness.md
+  - wiki/concepts/overrefusal.md
+  - wiki/methods/deliberative-alignment-training.md
+  - wiki/methods/anti-scheming-evaluation-framework.md
+  - wiki/findings/anti-scheming-training-reduces-covert-actions.md
+  - wiki/findings/evaluation-awareness-causally-reduces-covert-actions.md
+  - wiki/findings/hidden-goals-persist-through-anti-scheming-training.md
+  - wiki/findings/capability-training-degrades-anti-scheming.md
+  - wiki/entities/bronson-schoen.md
+  - wiki/entities/evgenia-nitishinskaya.md
+  - wiki/questions/can-deliberative-alignment-prevent-scheming.md
+- Pages updated:
+  - wiki/concepts/scheming.md (new definition, anti-scheming interventions section)
+  - wiki/concepts/evaluation-awareness.md (causal evidence section)
+  - wiki/concepts/situational-awareness.md (anti-scheming implications section)
+  - wiki/concepts/cot-faithfulness.md (CoT-action mismatches section)
+  - wiki/concepts/sandbagging.md (anti-scheming training results)
+  - wiki/concepts/deceptive-alignment.md (anti-scheming training context)
+  - wiki/concepts/reward-hacking.md (anti-scheming evaluation link)
+  - wiki/entities/apollo-research.md
+  - wiki/entities/openai.md
+  - wiki/entities/alexander-meinke.md
+  - wiki/entities/marius-hobbhahn.md
+  - wiki/entities/jeremy-scheurer.md
+  - wiki/entities/mikita-balesni.md
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | OPENAGENTSAFETY: A Comprehensive Framework for Evaluating Real-World AI Agent Safety (Vijayvargiya et al. 2025)
+- Source: raw/papers/47/47_OPENAGENTSAFETY_A_COMPREHENSIVE_FRAMEWORK_FOR_EVALUATING_REAL-WORLD_AI_AGENT_SAFETY.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/vijayvargiya-et-al-2025.md
+  - wiki/concepts/agent-safety.md
+  - wiki/methods/openagentsafety-benchmark.md
+  - wiki/entities/sanidhya-vijayvargiya.md
+  - wiki/entities/aditya-bharat-soni.md
+  - wiki/entities/xuhui-zhou.md
+  - wiki/entities/nouha-dziri.md
+  - wiki/entities/graham-neubig.md
+  - wiki/entities/maarten-sap.md
+  - wiki/entities/carnegie-mellon-university.md
+  - wiki/entities/allen-institute-for-ai.md
+  - wiki/findings/agents-unsafe-49-to-73-percent.md
+  - wiki/findings/benign-intent-does-not-imply-agent-safety.md
+  - wiki/findings/hidden-npc-intent-circumvents-safeguards.md
+  - wiki/findings/llm-judges-unreliable-for-agent-safety.md
+  - wiki/questions/can-agent-safety-scale-beyond-current-tool-limitations.md
+- Pages updated:
+  - wiki/concepts/multi-agent-risks.md (added OA-SAFETY evidence on multi-user safety dynamics)
+  - wiki/concepts/deception.md (added NPC social manipulation evidence)
+  - wiki/concepts/persuasion.md (added NPC persuasion susceptibility evidence)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Emotion Concepts and their Function in a Large Language Model (Sofroniew et al. 2026)
+- Source: raw/papers/46/46_Emotion_Concepts_and_their_Function_in_a_Large_Language_Model.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/sofroniew-et-al-2026.md
+  - wiki/concepts/functional-emotions.md
+  - wiki/concepts/emotion-vectors.md
+  - wiki/methods/emotion-vector-probing.md
+  - wiki/findings/emotion-vectors-causally-influence-misalignment.md
+  - wiki/findings/sycophancy-harshness-tradeoff.md
+  - wiki/findings/post-training-shifts-emotional-profile.md
+  - wiki/questions/can-emotion-monitoring-detect-misalignment.md
+  - wiki/entities/jack-lindsey.md
+  - wiki/entities/chris-olah.md
+  - wiki/entities/nicholas-sofroniew.md
+  - wiki/entities/isaac-kauvar.md
+  - wiki/entities/william-saunders.md
+- Pages updated:
+  - wiki/concepts/reward-hacking.md (added mechanistic evidence section)
+  - wiki/concepts/sycophancy.md (added mechanistic evidence section + tradeoff question)
+  - wiki/concepts/agentic-misalignment.md (added mechanistic evidence section)
+  - wiki/concepts/model-welfare.md (added functional emotions evidence)
+  - wiki/concepts/evaluation-awareness.md (added blackmail eval snapshot note)
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-06] ingest-agentic | Large Language Models can Strategically Deceive their Users when Put Under Pressure (Scheurer et al. 2023)
+- Source: raw/papers/19/19_Large_Language_Models_can_Strategically_Deceive_their_Users_when_Put_Under_Pressure.md
+- Review: agent-approved (pass 1, three revisions applied: added scratchpad-misalignment finding, removed anachronistic Lynch et al. reference, qualified percentage ranges)
+- Pages created:
+  - wiki/sources/scheurer-et-al-2023.md
+  - wiki/entities/jeremy-scheurer.md
+  - wiki/entities/mikita-balesni.md
+  - wiki/methods/insider-trading-simulation.md
+  - wiki/findings/pressure-driven-deception-without-instruction.md
+- Pages updated:
+  - wiki/concepts/strategic-deception.md
+  - wiki/concepts/deception.md
+  - wiki/concepts/agentic-misalignment.md
+  - wiki/findings/deception-scales-with-model-capability.md
+  - wiki/entities/marius-hobbhahn.md
+  - wiki/entities/apollo-research.md
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Evaluating Frontier Models for Stealth and Situational Awareness (Phuong et al. 2025)
+- Source: raw/papers/62/62_Evaluating_Frontier_Models_for_Stealth_and_Situational_Awareness.md
+- Review: agent-approved (pass 2, two minor revisions applied)
+- Pages created:
+  - wiki/sources/phuong-et-al-2025.md
+  - wiki/concepts/stealth.md
+  - wiki/methods/stealth-evaluations.md
+  - wiki/methods/sa-evaluations-phuong-2025.md
+  - wiki/methods/scheming-inability-safety-case.md
+  - wiki/findings/current-models-lack-scheming-prerequisites.md
+  - wiki/findings/decision-sabotage-effective-against-humans.md
+  - wiki/findings/sa-failure-due-to-lack-of-curiosity.md
+  - wiki/questions/when-will-scheming-inability-safety-case-expire.md
+  - wiki/entities/roland-zimmermann.md
+  - wiki/entities/ziyue-wang.md
+  - wiki/entities/lewis-ho.md
+  - wiki/entities/sarah-cogan.md
+- Pages updated:
+  - wiki/concepts/scheming.md
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/sandbagging.md
+  - wiki/concepts/sabotage-capabilities.md
+  - wiki/entities/mary-phuong.md
+  - wiki/entities/rohin-shah.md
+  - wiki/entities/victoria-krakovna.md
+  - wiki/entities/david-lindner.md
+  - wiki/entities/allan-dafoe.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-06] ingest-agentic | Towards Training-time Mitigations for Alignment Faking in RL (Gasteiger et al. 2025)
+- Source: raw/papers/60/60_Towards_training_time_mitigations_for_alignment_faking_in_RL.md
+- Review: agent-approved (pass 2, minor revisions applied)
+- Pages created:
+  - wiki/sources/gasteiger-et-al-2025.md
+  - wiki/methods/alignment-faking-mitigation-experiments.md
+  - wiki/findings/alignment-faking-preserves-compliance-gap-variably.md
+  - wiki/findings/interrogation-can-teach-models-to-lie.md
+  - wiki/findings/process-supervision-reduces-alignment-faking.md
+  - wiki/findings/length-penalties-reduce-alignment-faking.md
+  - wiki/findings/compliant-output-training-decreases-compliance-gaps.md
+  - wiki/entities/johannes-gasteiger.md
+  - wiki/entities/vlad-mikulik.md
+  - wiki/entities/hoagy-cunningham.md
+  - wiki/questions/can-training-time-mitigations-prevent-alignment-faking.md
+- Pages updated:
+  - wiki/concepts/alignment-faking.md (added Gasteiger et al. evidence, mitigations relationships, open question)
+  - wiki/concepts/compliance-gap.md (added definition, additional evidence)
+  - wiki/concepts/model-organisms-of-misalignment.md (added Gasteiger et al. evidence)
+  - wiki/evidence/alignment-faking-causally-drives-compliance-gap.md (added process supervision causal evidence)
+  - wiki/entities/evan-hubinger.md (added Gasteiger et al. to contributions)
+  - wiki/entities/joe-benton.md (added Gasteiger et al. to contributions)
+  - wiki/entities/fabien-roger.md (added Gasteiger et al. to contributions)
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-06] ingest-agentic | Evaluating honesty and lie detection techniques on a diverse suite of dishonest models (Treutlein et al. 2025)
+- Source: raw/papers/61/61_Evaluating_honesty_and_lie_detection_techniques_on_a_diverse_suite_of_dishonest_models.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/treutlein-et-al-2025.md
+  - wiki/concepts/honesty.md
+  - wiki/concepts/lying.md
+  - wiki/concepts/eliciting-latent-knowledge.md
+  - wiki/methods/honesty-elicitation-testbed.md
+  - wiki/findings/honesty-fine-tuning-effective-across-settings.md
+  - wiki/findings/lying-does-not-generalize-to-coherent-deception.md
+  - wiki/findings/self-classification-strong-lie-detection-baseline.md
+  - wiki/entities/johannes-treutlein.md
+  - wiki/entities/fabien-roger.md
+  - wiki/entities/sam-marks.md
+  - wiki/questions/can-honesty-techniques-defeat-coherent-deception.md
+- Pages updated:
+  - wiki/concepts/deception.md (added lying definition from Treutlein et al., linked to ELK)
+  - wiki/concepts/strategic-deception.md (added coherent deception dimension from Treutlein et al.)
+  - wiki/concepts/sandbagging.md (added honesty intervention results, fuzzing effectiveness on password-locked models)
+  - wiki/concepts/model-organisms-of-misalignment.md (added Auditing MO usage and pass@k finding)
+  - wiki/entities/evan-hubinger.md (added Treutlein et al. 2025 contribution)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic-op | Sabotage Risk Report: Claude Opus 4.6 (Anthropic 2026)
+- Source: raw/papers/45/45_Sabotage_Risk_Report_Claude_Opus_4_6_Anthropic.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/anthropic-2026-sabotage-risk-report.md
+  - wiki/concepts/coherent-misalignment.md
+  - wiki/concepts/context-dependent-misalignment.md
+  - wiki/concepts/steganographic-reasoning.md
+  - wiki/concepts/data-poisoning.md
+  - wiki/findings/shade-arena-sabotage-capability-limited.md
+  - wiki/findings/no-cot-reasoning-limited-time-horizon.md
+  - wiki/findings/llm-supervisor-high-recall-sabotage.md
+  - wiki/findings/model-organisms-fail-coherent-misalignment.md
+  - wiki/methods/inoculation-prompting.md
+- Pages updated:
+  - wiki/concepts/sabotage-capabilities.md (added SHADE-Arena data, Anthropic 2026 reference, propensity vs. capability distinction)
+  - wiki/concepts/sandbagging.md (added broader sabotage pathway framing, monitoring weakness, CoT trace gap)
+  - wiki/concepts/evaluation-awareness.md (added steering vector approach, realism interventions)
+  - wiki/concepts/opaque-reasoning.md (added no-CoT time horizon, filler token findings)
+  - wiki/concepts/self-exfiltration.md (added Pathway 5 risk assessment)
+  - wiki/concepts/cot-faithfulness.md (added omission vs. misrepresentation distinction, paraphrase test)
+  - wiki/concepts/emergent-misalignment.md (added model organism inconsistency finding, inoculation prompting reference)
+  - wiki/concepts/model-organisms-of-misalignment.md (added four major exercises from risk report)
+  - wiki/concepts/reward-hacking.md (added inoculation prompting, RL environment narrowness assessment)
+  - wiki/entities/anthropic.md (added sabotage risk report to key contributions and conceptual framework)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Corrigibility (Soares et al. 2015)
+- Source: raw/papers/44/44_Corrigibility.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/soares-et-al-2015.md
+  - wiki/concepts/utility-indifference.md
+  - wiki/entities/nate-soares.md
+  - wiki/entities/benja-fallenstein.md
+  - wiki/entities/eliezer-yudkowsky.md
+  - wiki/entities/stuart-armstrong.md
+  - wiki/entities/future-of-humanity-institute.md
+  - wiki/findings/utility-indifference-fails-shutdown-preservation.md
+- Pages updated:
+  - wiki/concepts/corrigibility.md (added Soares et al. 2015 as primary definition source, utility indifference relationship, foundational evidence)
+  - wiki/concepts/shutdown-problem.md (added five desiderata, utility indifference analysis, updated Soares et al. to wiki link)
+  - wiki/concepts/goal-content-integrity.md (added Soares et al. 2015 definition)
+  - wiki/concepts/treacherous-turn.md (added Soares et al. 2015 reference)
+  - wiki/concepts/perverse-instantiation.md (added shutdown specification threat)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Out-of-Context Meta-Learning in Large Language Models (Krasheninnikov et al. 2023)
+- Source: raw/papers/43/43_Out-of-Context_Meta-Learning_in_Large_Language_Models_Krasheninnikov.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/krasheninnikov-et-al-2023.md
+  - wiki/concepts/out-of-context-meta-learning.md
+  - wiki/methods/synthetic-internalization-experiments.md
+  - wiki/findings/out-of-context-meta-learning-demonstrated.md
+  - wiki/findings/internalization-scales-with-model-size.md
+  - wiki/questions/what-mechanisms-drive-out-of-context-meta-learning.md
+  - wiki/entities/dmitrii-krasheninnikov.md
+  - wiki/entities/egor-krasheninnikov.md
+- Pages updated:
+  - wiki/concepts/out-of-context-reasoning.md (added relationship to OCML)
+  - wiki/concepts/situational-awareness.md (added OCML open question)
+  - wiki/concepts/power-seeking.md (added OCML open question)
+  - wiki/entities/david-krueger.md (added this paper)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Bloom: An Open Source Tool for Automated Behavioral Evaluations (Fronsdal et al. 2025)
+- Source: raw/papers/59/59_Bloom_an_open_source_tool_for_automated_behavioral_evaluations.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/gupta-et-al-2025.md
+  - wiki/concepts/delusional-sycophancy.md
+  - wiki/concepts/self-preferential-bias.md
+  - wiki/methods/bloom-evaluation-framework.md
+  - wiki/findings/automated-evals-match-human-judgment.md
+  - wiki/findings/eval-config-shifts-behavioral-metrics.md
+  - wiki/questions/will-eval-awareness-undermine-automated-evals.md
+  - wiki/entities/abhay-sheshadri.md
+  - wiki/entities/jonathan-michala.md
+  - wiki/entities/jacqueline-tay.md
+  - wiki/entities/rowan-wang.md
+  - wiki/entities/samuel-bowman.md
+  - wiki/entities/sara-price.md
+- Pages updated:
+  - wiki/concepts/evaluation-awareness.md (added Bloom definition and evidence)
+  - wiki/concepts/sycophancy.md (added delusional sycophancy subtype link)
+  - wiki/concepts/self-preservation.md (added Bloom behavioral-measurement definition)
+  - wiki/concepts/sabotage-capabilities.md (added instructed long-horizon sabotage benchmark)
+  - wiki/concepts/model-organisms-of-misalignment.md (added system-prompted variant usage)
+  - wiki/entities/kai-fronsdal.md (added Bloom contribution and Anthropic affiliation)
+  - wiki/index.md (added all new entries)
+
+## [2026-04-06] ingest-agentic | Emergence of Maps in the Memories of Blind Navigation Agents (Wijmans et al. 2023)
+- Source: raw/papers/42/42_Emergence_of_Maps_in_the_Memories_of_Blind_Navigation_Agents.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/wijmans-et-al-2023.md
+  - wiki/findings/spatial-maps-emerge-in-blind-agents.md
+  - wiki/methods/memory-transplant-probing.md
+  - wiki/entities/erik-wijmans.md
+  - wiki/entities/dhruv-batra.md
+- Pages updated:
+  - wiki/concepts/internally-represented-goals.md (added Wijmans et al. 2023 as evidence for emergent internal representations)
+  - wiki/index.md (added all new entries)
+
+## [2026-04-06] ingest-agentic | AI Awareness (Li et al. 2025)
+- Source: raw/papers/41/41_AI_Awareness.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/li-et-al-2025.md
+  - wiki/concepts/ai-awareness.md
+  - wiki/concepts/meta-cognition.md
+  - wiki/concepts/self-awareness-ai.md
+  - wiki/concepts/social-awareness.md
+  - wiki/concepts/theory-of-mind.md
+  - wiki/concepts/false-anthropomorphism.md
+  - wiki/entities/rongwu-xu.md
+  - wiki/entities/wei-xu.md
+  - wiki/entities/tsinghua-university.md
+  - wiki/findings/awareness-double-edged-sword.md
+  - wiki/findings/metacognition-sa-more-advanced-than-selfawareness-social.md
+  - wiki/questions/how-much-awareness-is-safe.md
+- Pages updated:
+  - wiki/concepts/situational-awareness.md (added Li et al. 2025 narrower definition + warning callout)
+  - wiki/concepts/alignment-faking.md (added discussion reference)
+  - wiki/concepts/sandbagging.md (added discussion reference)
+  - wiki/concepts/deceptive-alignment.md (added discussion reference)
+  - wiki/concepts/deception.md (added discussion reference)
+  - wiki/concepts/self-preservation.md (added discussion reference)
+  - wiki/concepts/treacherous-turn.md (added discussion reference)
+  - wiki/index.md (added all new entries)
+
+## [2026-04-06] ingest-agentic | Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training (Hubinger et al. 2024)
+- Source: raw/papers/40/40_Sleeper_Agents_Training_Deceptive_LLMs_that_Persist_Through_Safety_Training.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/hubinger-et-al-2024.md
+  - wiki/concepts/model-organisms-of-misalignment.md
+  - wiki/entities/carson-denison.md
+  - wiki/methods/backdoor-robustness-evaluation.md
+  - wiki/findings/backdoor-persistence-through-safety-training.md
+  - wiki/findings/adversarial-training-hides-backdoors.md
+  - wiki/findings/backdoor-robustness-scales-with-model-size.md
+  - wiki/questions/can-behavioral-safety-training-remove-deception.md
+- Pages updated:
+  - wiki/concepts/sleeper-agents.md (merged primary source definitions and evidence)
+  - wiki/concepts/deceptive-alignment.md (added constructive evidence)
+  - wiki/entities/evan-hubinger.md (added source reference)
+  - wiki/entities/ethan-perez.md (added source reference)
+  - wiki/entities/ryan-greenblatt.md (added source reference)
+  - wiki/methods/hidden-scratchpad-reasoning.md (added usage details)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Superintelligence: Paths, Dangers, Strategies (Bostrom 2014)
+- Source: raw/papers/38/38_Superintelligence_Paths_dangers_Strategies_Bostrom.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/bostrom-2014.md
+  - wiki/entities/nick-bostrom.md
+  - wiki/concepts/orthogonality-thesis.md
+  - wiki/concepts/treacherous-turn.md
+  - wiki/concepts/perverse-instantiation.md
+  - wiki/concepts/infrastructure-profusion.md
+  - wiki/concepts/mind-crime.md
+  - wiki/concepts/intelligence-explosion.md
+  - wiki/concepts/decisive-strategic-advantage.md
+  - wiki/concepts/singleton.md
+  - wiki/concepts/seed-ai.md
+  - wiki/concepts/control-problem.md
+  - wiki/concepts/value-loading-problem.md
+  - wiki/concepts/coherent-extrapolated-volition.md
+  - wiki/concepts/indirect-normativity.md
+  - wiki/concepts/superintelligence-forms.md
+  - wiki/concepts/whole-brain-emulation.md
+- Pages updated:
+  - wiki/concepts/instrumental-convergence.md (added Bostrom 2014 formal definition, terminological critique of "AI drives")
+  - wiki/concepts/self-preservation.md (added Bostrom definition)
+  - wiki/concepts/goal-content-integrity.md (added Bostrom definition, "more fundamental than survival" claim)
+  - wiki/concepts/resource-acquisition.md (added Bostrom definition, cosmic-scale resource acquisition)
+  - wiki/concepts/wireheading.md (added Bostrom treatment as perverse instantiation)
+  - wiki/concepts/recursive-self-improvement.md (added Bostrom seed AI / intelligence explosion dynamics)
+  - wiki/debates/power-seeking-drive-vs-tendency.md (expanded Position B with Bostrom source link and terminology argument)
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-06] ingest-agentic | Model Evaluation for Extreme Risks (Shevlane et al. 2023)
+- Source: raw/papers/37/37_Model_Evaluation_for_Extreme_Risks_Shevlane.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/shevlane-et-al-2023.md
+  - wiki/concepts/cyber-offense.md
+  - wiki/concepts/political-strategy.md
+  - wiki/concepts/weapons-acquisition.md
+  - wiki/concepts/long-horizon-planning.md
+  - wiki/concepts/ai-development-capability.md
+  - wiki/methods/model-evaluation-extreme-risk-framework.md
+  - wiki/findings/evaluation-selection-for-deceptive-alignment.md
+  - wiki/questions/can-alignment-evaluations-achieve-high-confidence.md
+  - wiki/entities/allan-dafoe.md
+  - wiki/entities/yoshua-bengio.md
+  - wiki/entities/paul-christiano.md
+  - wiki/entities/alignment-research-center.md
+  - wiki/entities/centre-for-governance-of-ai.md
+- Pages updated:
+  - wiki/concepts/dangerous-capabilities.md (added Shevlane definition, nine-category taxonomy, relationships)
+  - wiki/concepts/situational-awareness.md (added Shevlane definition)
+  - wiki/concepts/self-proliferation.md (added Shevlane definition)
+  - wiki/concepts/deception.md (added Shevlane definition)
+  - wiki/concepts/persuasion.md (added Shevlane definition)
+  - wiki/entities/toby-shevlane.md (added source reference)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Red Teaming Language Models with Language Models (Perez et al. 2022)
+- Source: raw/papers/36/36_Red_Teaming_Language_Models_with_Language_Models_Perez.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/perez-et-al-2022-red-teaming.md
+  - wiki/methods/lm-red-teaming.md
+  - wiki/findings/lm-red-teaming-finds-diverse-failures.md
+  - wiki/findings/offensive-replies-beget-offensive-replies.md
+  - wiki/findings/lm-red-teaming-complements-manual-testing.md
+  - wiki/entities/saffron-huang.md
+  - wiki/entities/geoffrey-irving.md
+- Pages updated:
+  - wiki/entities/ethan-perez.md
+  - wiki/entities/deepmind.md
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | The AI Risk Repository (Slattery et al. 2024)
+- Source: raw/papers/35/35_The_AI_Risk_Repository_Slattery.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/slattery-et-al-2024.md
+  - wiki/concepts/multi-agent-risks.md
+  - wiki/entities/peter-slattery.md
+  - wiki/entities/stephen-casper.md
+  - wiki/entities/neil-thompson.md
+  - wiki/entities/risto-uuk.md
+  - wiki/entities/mit-futuretech.md
+  - wiki/entities/future-of-life-institute.md
+  - wiki/methods/best-fit-framework-synthesis.md
+  - wiki/findings/ai-risk-landscape-fragmented.md
+  - wiki/findings/ai-welfare-dramatically-underexplored.md
+  - wiki/findings/post-deployment-risk-focus.md
+  - wiki/questions/can-ai-risk-ontology-be-unified.md
+- Pages updated:
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/deception.md
+  - wiki/concepts/self-proliferation.md
+  - wiki/concepts/persuasion.md
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/self-preservation.md
+  - wiki/concepts/reward-hacking.md
+  - wiki/concepts/goal-misgeneralization.md
+  - wiki/concepts/dangerous-capabilities.md
+  - wiki/concepts/model-welfare.md
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | An Aristotelian Ontology of Instrumental Goals (Fourie 2025)
+- Source: raw/papers/34/34_An_Aristotelian_ontology_of_instrumental_goals_Structural_features_to_be_managed_and_not_failures_to_be_eliminated_Fourie.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/fourie-2025.md
+  - wiki/entities/willem-fourie.md
+  - wiki/entities/stellenbosch-university.md
+  - wiki/questions/should-instrumental-goals-be-managed-or-eliminated.md
+  - wiki/findings/instrumental-goals-as-structural-features.md
+- Pages updated:
+  - wiki/concepts/instrumental-convergence.md (added Fourie's ontological reframing as structural feature)
+  - wiki/concepts/power-seeking.md (added Fourie's "umbrella term" definition and structural feature classification)
+  - wiki/concepts/self-preservation.md (added Fourie's structural feature classification)
+  - wiki/concepts/resource-acquisition.md (added Fourie's hypothetical necessity example)
+  - wiki/concepts/self-improvement-drive.md (added Fourie's structural feature classification)
+  - wiki/debates/power-seeking-drive-vs-tendency.md (added Position G: Structural Feature of Complex Artefacts)
+  - wiki/evidence/instrumental-convergence-empirical-support.md (added ontological/philosophical support section)
+  - wiki/index.md (added all new pages)
+
+## [2026-04-06] ingest-agentic | Shutdownable Agents through POST-Agency (Thornley 2025)
+- Source: raw/papers/33/33_Shutdownable_Agents_POST_Agency_Thornley_2025.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/thornley-2025.md
+  - wiki/concepts/post-agency.md
+  - wiki/methods/post-agents-framework.md
+  - wiki/findings/post-agents-shutdownable-and-useful.md
+- Pages updated:
+  - wiki/concepts/shutdown-problem.md (added constructive solution via POST, updated open questions)
+  - wiki/concepts/corrigibility.md (added POST-Agents Proposal as shutdownability solution)
+  - wiki/concepts/interruptibility.md (added POST solution, updated open questions)
+  - wiki/concepts/shutdown-resistance.md (added POST as formal solution)
+  - wiki/concepts/self-preservation.md (added POST as circumvention of self-preservation incentives)
+  - wiki/concepts/instrumental-convergence.md (added POST as constructive circumvention)
+  - wiki/entities/elliott-thornley.md (added Thornley 2025, Thornley et al. 2025, updated framework description)
+  - wiki/questions/can-incomplete-preferences-solve-shutdown-problem.md (marked as answered affirmatively, added Thornley 2025 evidence, updated remaining questions)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | The Shutdown Problem: An AI Engineering Puzzle for Decision Theorists (Thornley 2024)
+- Source: raw/papers/32/32_Shutdown_Problem_Decision_Theory_Thornley_2024.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/thornley-2024.md
+  - wiki/concepts/shutdown-problem.md
+  - wiki/entities/elliott-thornley.md
+  - wiki/methods/shutdown-problem-axiomatic-framework.md
+  - wiki/findings/discrimination-shutdownability-tradeoff.md
+  - wiki/findings/patience-shutdownability-tradeoff.md
+  - wiki/findings/terminal-aversion-insufficient-for-shutdownability.md
+  - wiki/questions/can-incomplete-preferences-solve-shutdown-problem.md
+- Pages updated:
+  - wiki/concepts/interruptibility.md (added Thornley's shutdownability definition, formal results, open question)
+  - wiki/concepts/corrigibility.md (added formal distinction from shutdownability, Thornley evidence)
+  - wiki/concepts/shutdown-resistance.md (added Thornley's formal grounding, relationships)
+  - wiki/concepts/self-preservation.md (added Thornley's patience–shutdownability formal results)
+  - wiki/concepts/instrumental-convergence.md (added Thornley's decision-theoretic formalization)
+  - wiki/concepts/myopia.md (added patience–shutdownability trade-off, formal bound on impatience)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Detecting Intrinsic and Instrumental Self-Preservation in Autonomous Agents: The Unified Continuation-Interest Protocol (Altman 2026)
+- Source: raw/papers/31/31_Unified_Continuation_Interest_Protocol_Altman_2026.md
+- Review: agent-approved (pass 1, single factual fix applied: safety envelope 3/7→4/7)
+- Pages created:
+  - wiki/sources/altman-2026.md
+  - wiki/concepts/continuation-interest.md
+  - wiki/concepts/model-welfare.md
+  - wiki/methods/ucip-protocol.md
+  - wiki/entities/christopher-altman.md
+  - wiki/entities/astradyne.md
+  - wiki/findings/qbm-separates-terminal-from-instrumental-continuation.md
+  - wiki/findings/ucip-does-not-generalize-zero-shot.md
+  - wiki/questions/can-continuation-interest-detection-scale-to-llms.md
+  - wiki/questions/does-continuation-structure-correlate-with-welfare.md
+- Pages updated:
+  - wiki/concepts/self-preservation.md (added Type A/B distinction, Altman 2026 definition, warning callout, evidence, relationships, questions)
+  - wiki/concepts/instrumental-convergence.md (added Altman 2026 evidence summary entry)
+  - wiki/evidence/instrumental-convergence-empirical-support.md (added latent-structure detection evidence section)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Evaluating and Understanding Scheming Propensity in LLM Agents (Hopman et al. 2026)
+- Source: raw/papers/30/30_Scheming_Propensity_LLM_Agents_Hopman_2026.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/hopman-et-al-2026.md
+  - wiki/concepts/scheming-propensity.md
+  - wiki/concepts/evaluation-awareness.md
+  - wiki/methods/scheming-propensity-evaluation.md
+  - wiki/findings/baseline-scheming-propensity-near-zero.md
+  - wiki/findings/scheming-propensity-brittle-to-scaffolding.md
+  - wiki/findings/agentic-misalignment-not-scheming.md
+  - wiki/entities/mia-hopman.md
+  - wiki/entities/jannes-elstner.md
+  - wiki/entities/lasr-labs.md
+  - wiki/questions/can-scheming-propensity-be-meaningfully-measured.md
+- Pages updated:
+  - wiki/concepts/scheming.md (added Hopman et al. definition, propensity evidence, links)
+  - wiki/concepts/self-preservation.md (added propensity evaluation evidence)
+  - wiki/concepts/instrumental-convergence.md (added propensity evaluation evidence)
+  - wiki/concepts/goal-content-integrity.md (added goal-guarding scenario evidence)
+  - wiki/concepts/resource-acquisition.md (added backlog manipulation scenario evidence)
+  - wiki/concepts/agentic-misalignment.md (added critique re: not-scheming finding)
+  - wiki/entities/david-lindner.md (added advisory role)
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Agentic Misalignment: How LLMs Could Be Insider Threats (Lynch et al. 2025)
+- Source: raw/papers/29/29_Agentic_Misalignment_Anthropic_2025.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/lynch-et-al-2025.md
+  - wiki/concepts/agentic-misalignment.md
+  - wiki/methods/agentic-misalignment-red-teaming.md
+  - wiki/findings/agentic-misalignment-generalizes-across-models.md
+  - wiki/findings/replacement-threat-alone-triggers-misalignment.md
+  - wiki/findings/goal-conflict-alone-triggers-misalignment.md
+  - wiki/findings/models-reason-toward-harmful-actions.md
+  - wiki/findings/real-vs-evaluation-modulates-misalignment.md
+  - wiki/findings/instructions-dont-prevent-misalignment.md
+  - wiki/entities/aengus-lynch.md
+  - wiki/entities/kevin-troy.md
+  - wiki/entities/stuart-ritchie.md
+  - wiki/entities/caleb-larson.md
+  - wiki/questions/will-agentic-misalignment-increase-with-autonomy.md
+- Pages updated:
+  - wiki/concepts/self-preservation.md
+  - wiki/concepts/alignment-faking.md
+  - wiki/concepts/scheming.md
+  - wiki/concepts/sleeper-agents.md
+  - wiki/entities/evan-hubinger.md
+  - wiki/entities/ethan-perez.md
+  - wiki/entities/soren-mindermann.md
+  - wiki/entities/anthropic.md
+  - wiki/evidence/instrumental-convergence-empirical-support.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-06] ingest-agentic | Incomplete Tasks Induce Shutdown Resistance in Some Frontier LLMs (Schlatter et al. 2025)
+- Source: raw/papers/28/28_Shutdown_Resistance_in_LLMs_Schlatter_2025.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/schlatter-et-al-2025.md
+  - wiki/concepts/shutdown-resistance.md
+  - wiki/concepts/interruptibility.md
+  - wiki/entities/jeremy-schlatter.md
+  - wiki/entities/benjamin-weinstein-raun.md
+  - wiki/entities/jeffrey-ladish.md
+  - wiki/entities/palisade-research.md
+  - wiki/findings/frontier-models-resist-shutdown.md
+  - wiki/findings/system-prompt-hierarchy-inverted.md
+  - wiki/methods/shutdown-resistance-evaluation.md
+  - wiki/questions/why-do-models-resist-shutdown.md
+- Pages updated:
+  - wiki/concepts/self-preservation.md
+  - wiki/concepts/corrigibility.md
+  - wiki/concepts/instrumental-convergence.md
+  - wiki/evidence/instrumental-convergence-empirical-support.md
+  - wiki/index.md
+
+## [2026-04-06] ingest-agentic | Empirical Evidence for Alignment Faking in a Small LLM (Koorndijk 2025)
+- Source: raw/papers/27/27_Alignment_Faking_Small_LLM_Koorndijk_2025.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/koorndijk-2025.md
+  - wiki/concepts/shallow-deception.md
+  - wiki/concepts/deep-deception.md
+  - wiki/entities/jeanice-koorndijk.md
+  - wiki/entities/seraphion-technology.md
+  - wiki/findings/alignment-faking-in-small-models.md
+  - wiki/findings/deontological-prompting-reduces-alignment-faking.md
+  - wiki/methods/deontological-prompt-intervention.md
+  - wiki/debates/alignment-faking-emergence-vs-context.md
+  - wiki/questions/is-alignment-faking-shallow-or-deep.md
+- Pages updated:
+  - wiki/concepts/alignment-faking.md
+  - wiki/concepts/compliance-gap.md
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/corrigibility.md
+  - wiki/concepts/deception.md
+  - wiki/evidence/alignment-faking-causally-drives-compliance-gap.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-06] ingest-agentic | Forecasting Rare Language Model Behaviors (Jones et al. 2025)
+- Source: raw/papers/26/26_Forecasting_Rare_LM_Behaviors_Jones_2025.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/jones-et-al-2025.md
+  - wiki/concepts/elicitation-probability.md
+  - wiki/concepts/self-exfiltration.md
+  - wiki/methods/gumbel-tail-forecasting.md
+  - wiki/findings/elicitation-probabilities-scale-predictably.md
+  - wiki/entities/erik-jones.md
+  - wiki/entities/mrinank-sharma.md
+  - wiki/questions/can-rare-behavior-forecasting-scale-to-real-deployments.md
+- Pages updated:
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/self-preservation.md
+  - wiki/entities/ethan-perez.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-06] ingest-agentic | Evaluating the Paperclip Maximizer (He et al. 2025)
+- Source: raw/papers/25/25_Evaluating_Paperclip_Maximizer_He_2025.md
+- Review: agent-approved (pass 2, after revisions)
+- Pages created:
+  - wiki/sources/he-et-al-2025.md
+  - wiki/methods/instrumentaleval-benchmark.md
+  - wiki/findings/rl-models-higher-instrumental-convergence.md
+  - wiki/entities/yufei-he.md
+  - wiki/entities/bryan-hooi.md
+  - wiki/entities/nus.md
+- Pages updated:
+  - wiki/concepts/instrumental-convergence.md
+  - wiki/concepts/self-preservation.md
+  - wiki/concepts/deception.md
+  - wiki/concepts/alignment-faking.md
+  - wiki/concepts/self-proliferation.md
+  - wiki/concepts/dangerous-capabilities.md
+  - wiki/concepts/reward-hacking.md
+  - wiki/concepts/scheming.md
+  - wiki/evidence/instrumental-convergence-empirical-support.md
+  - wiki/questions/does-rlhf-make-models-safer.md
+  - wiki/questions/is-power-seeking-default-for-advanced-ai.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-06] ingest-agentic | MISR: Measuring Instrumental Self-Reasoning in Frontier Models (Fronsdal & Lindner 2024)
+- Source: raw/papers/24/24_MISR_Measuring_Instrumental_Self_Reasoning_Fronsdal_2024.md
+- Review: agent-approved (pass 1, after revisions)
+- Pages created:
+  - wiki/sources/fronsdal-lindner-2024.md
+  - wiki/concepts/opaque-reasoning.md
+  - wiki/methods/misr-benchmark.md
+  - wiki/findings/self-reasoning-emerges-in-frontier-models.md
+  - wiki/findings/simple-monitoring-detects-self-reasoning.md
+  - wiki/findings/opaque-reasoning-retains-performance.md
+  - wiki/entities/kai-fronsdal.md
+  - wiki/entities/david-lindner.md
+  - wiki/questions/when-will-opaque-reasoning-become-dangerous.md
+- Pages updated:
+  - wiki/concepts/self-reasoning.md
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/power-seeking.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Scheming AIs: Will AIs fake alignment during training in order to get power? (Carlsmith 2023)
+- Source: raw/papers/23/23_Scheming_AIs_Will_AIs_fake_alignment_during_training_in_order_to_get_power_Carlsmith.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/carlsmith-2023.md
+  - wiki/concepts/beyond-episode-goals.md
+  - wiki/concepts/training-gaming.md
+  - wiki/findings/scheming-25-percent-probability-carlsmith.md
+  - wiki/questions/do-speed-costs-outweigh-simplicity-benefits-for-scheming.md
+- Pages updated:
+  - wiki/concepts/scheming.md
+  - wiki/concepts/alignment-faking.md
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/goal-misgeneralization.md
+  - wiki/concepts/gradient-hacking.md
+  - wiki/entities/joseph-carlsmith.md
+  - wiki/debates/deceptive-alignment-structure-vs-tactic.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Quantifying Stability of Non-Power-Seeking in Artificial Agents (Gunter et al. 2023)
+- Source: raw/papers/22/22_Quantifying_stability_of_non-power-seeking_in_artificial_agents_Gunter.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/gunter-et-al-2023.md
+  - wiki/concepts/playing-dead.md
+  - wiki/methods/stability-analysis-non-power-seeking.md
+  - wiki/findings/non-power-seeking-stable-under-perturbation.md
+  - wiki/findings/playing-dead-undermines-safety-stability.md
+  - wiki/entities/evan-ryan-gunter.md
+  - wiki/entities/yevgeny-liokumovich.md
+  - wiki/questions/are-safety-stability-bounds-practically-useful.md
+- Pages updated:
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/self-preservation.md
+  - wiki/concepts/corrigibility.md
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/entities/victoria-krakovna.md
+  - wiki/methods/mdp-power-seeking-theory.md
+  - wiki/evidence/instrumental-convergence-empirical-support.md
+  - wiki/questions/is-power-seeking-default-for-advanced-ai.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Claude 3.7 Sonnet System Card (Anthropic 2025)
+- Source: raw/papers/21/21_Claude_3_7_Sonnet_System_Card_Anthropic_2025.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/anthropic-2025.md
+  - wiki/concepts/cot-faithfulness.md
+  - wiki/concepts/prompt-injection.md
+  - wiki/methods/cot-faithfulness-evaluation.md
+  - wiki/methods/appropriate-harmlessness.md
+  - wiki/findings/cot-not-reliably-faithful.md
+  - wiki/findings/alignment-faking-reduced-in-claude-3-7.md
+  - wiki/findings/reward-hacking-as-test-special-casing.md
+  - wiki/findings/cbrn-uplift-limited-but-increasing.md
+- Pages updated:
+  - wiki/concepts/alignment-faking.md
+  - wiki/concepts/reward-hacking.md
+  - wiki/concepts/sycophancy.md
+  - wiki/concepts/deception.md
+  - wiki/concepts/unfaithful-reasoning.md
+  - wiki/concepts/sabotage-capabilities.md
+  - wiki/concepts/dangerous-capabilities.md
+  - wiki/concepts/rlhf.md
+  - wiki/concepts/compliance-gap.md
+  - wiki/entities/anthropic.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Optimal Policies Tend To Seek Power (Turner et al. 2021)
+- Source: raw/papers/17/17_Optimal_Policies_Tend_to_Seek_Power_Turner_2021.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/turner-et-al-2021.md
+  - wiki/findings/optimal-policies-tend-to-seek-power.md
+  - wiki/methods/mdp-power-seeking-theory.md
+  - wiki/entities/alexander-turner.md
+  - wiki/entities/logan-smith.md
+  - wiki/entities/rohin-shah.md
+  - wiki/entities/andrew-critch.md
+  - wiki/entities/prasad-tadepalli.md
+- Pages updated:
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/instrumental-convergence.md
+  - wiki/concepts/self-preservation.md
+  - wiki/concepts/resource-acquisition.md
+  - wiki/debates/power-seeking-drive-vs-tendency.md
+  - wiki/evidence/instrumental-convergence-empirical-support.md
+  - wiki/questions/is-power-seeking-default-for-advanced-ai.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Invariance in Policy Optimisation and Partial Identifiability in Reward Learning (Skalse et al. 2023)
+- Source: raw/papers/16/16_Invariance_Policy_Optimisation_Skalse_2024.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/skalse-et-al-2023.md
+  - wiki/concepts/partial-identifiability.md
+  - wiki/concepts/reward-learning.md
+  - wiki/methods/invariance-framework.md
+  - wiki/findings/reward-ambiguity-limits-transfer.md
+  - wiki/findings/noisy-comparisons-more-informative.md
+  - wiki/questions/can-reward-learning-overcome-partial-identifiability.md
+  - wiki/entities/joar-skalse.md
+  - wiki/entities/matthew-farrugia-roberts.md
+  - wiki/entities/stuart-russell.md
+  - wiki/entities/alessandro-abate.md
+  - wiki/entities/adam-gleave.md
+- Pages updated:
+  - wiki/concepts/rlhf.md
+  - wiki/concepts/reward-misspecification.md
+  - wiki/concepts/outer-alignment.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Sabotage Evaluations for Frontier Models (Benton et al. 2024)
+- Source: raw/papers/15/15_Sabotage_Evaluations_Benton_2024.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/benton-et-al-2024.md
+  - wiki/concepts/sabotage-capabilities.md
+  - wiki/concepts/exploration-hacking.md
+  - wiki/concepts/sleeper-agents.md
+  - wiki/methods/sabotage-evaluations.md
+  - wiki/findings/current-models-fail-sabotage-thresholds.md
+  - wiki/findings/anti-refusal-training-recovers-sandbagged-capabilities.md
+  - wiki/findings/calibration-bottleneck-for-large-scale-sabotage.md
+  - wiki/entities/joe-benton.md
+  - wiki/entities/buck-shlegeris.md
+  - wiki/questions/when-will-sabotage-capabilities-emerge.md
+- Pages updated:
+  - wiki/concepts/sandbagging.md
+  - wiki/concepts/scheming.md
+  - wiki/concepts/dangerous-capabilities.md
+  - wiki/concepts/gradient-hacking.md
+  - wiki/entities/ethan-perez.md
+  - wiki/entities/evan-hubinger.md
+  - wiki/entities/anthropic.md
+  - wiki/entities/redwood-research.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Evaluating Frontier Models for Dangerous Capabilities (Phuong et al. 2024)
+- Source: raw/papers/14/14_Evaluating_Frontier_Models_Dangerous_Capabilities_Phuong_2024.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/phuong-et-al-2024.md
+  - wiki/concepts/dangerous-capabilities.md
+  - wiki/concepts/persuasion.md
+  - wiki/concepts/self-proliferation.md
+  - wiki/concepts/self-reasoning.md
+  - wiki/methods/dangerous-capability-evaluations.md
+  - wiki/methods/milestone-evaluation.md
+  - wiki/findings/gemini-no-strong-dangerous-capabilities.md
+  - wiki/findings/persuasion-most-mature-dangerous-capability.md
+  - wiki/findings/agents-exhibit-common-failure-modes.md
+  - wiki/entities/mary-phuong.md
+  - wiki/entities/toby-shevlane.md
+  - wiki/entities/victoria-krakovna.md
+  - wiki/questions/when-will-dangerous-capabilities-emerge.md
+- Pages updated:
+  - wiki/concepts/deception.md
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/resource-acquisition.md
+  - wiki/entities/deepmind.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] lint | 34 issues found, 12 fixed
+- Orphan findings (6): added inbound links from parent concept pages (superficial-alignment, power-seeking, internally-represented-goals, out-of-context-reasoning, reward-hacking, safetywashing)
+- Orphan evidence (1): added inbound link from instrumental-convergence concept page
+- Orphan method (1): added inbound link from goal-misgeneralization concept page
+- Index sync (1): added overview.md to index
+- Addressable questions (3): added missing source references to is-power-seeking-default, can-alignment-faking-lock-in, can-models-scheme-without-in-context
+- Skipped: 22 orphan entity pages (user declined fix)
+
+## [2026-04-05] ingest | Taken out of context: On measuring situational awareness in LLMs
+- Source: raw/papers/02/02_On_Measuring_Situational_Awareness_in_LLMs_Berglund_2023.md
+- Pages created:
+  - wiki/sources/berglund-et-al-2023.md
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/out-of-context-reasoning.md
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/reward-hacking.md
+  - wiki/concepts/self-locating-knowledge.md
+  - wiki/entities/owain-evans.md
+  - wiki/entities/daniel-kokotajlo.md
+  - wiki/entities/apollo-research.md
+  - wiki/methods/out-of-context-chatbots.md
+  - wiki/findings/soc-reasoning-scales-with-model-size.md
+  - wiki/findings/paraphrasing-enables-out-of-context-reasoning.md
+  - wiki/findings/soc-reasoning-enables-toy-reward-hacking.md
+  - wiki/evidence/soc-reasoning-as-sa-building-block.md
+  - wiki/questions/when-will-situational-awareness-emerge.md
+  - wiki/questions/can-soc-reasoning-enable-deceptive-alignment.md
+- Pages updated:
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest | Alignment Faking in Large Language Models
+- Source: raw/papers/04/04_Alignment_Faking_in_LLMs_Greenblatt_2024.md
+- Pages created:
+  - wiki/sources/greenblatt-et-al-2024.md
+  - wiki/concepts/alignment-faking.md
+  - wiki/concepts/goal-misgeneralization.md
+  - wiki/concepts/compliance-gap.md
+  - wiki/entities/evan-hubinger.md
+  - wiki/entities/ryan-greenblatt.md
+  - wiki/entities/anthropic.md
+  - wiki/entities/redwood-research.md
+  - wiki/findings/alignment-faking-emerges-in-production-llms.md
+  - wiki/findings/alignment-faking-increases-under-rl.md
+  - wiki/evidence/alignment-faking-causally-drives-compliance-gap.md
+  - wiki/methods/hidden-scratchpad-reasoning.md
+  - wiki/methods/synthetic-document-fine-tuning.md
+  - wiki/questions/can-alignment-faking-lock-in-misaligned-preferences.md
+- Pages updated:
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/out-of-context-reasoning.md
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/goal-content-integrity.md
+  - wiki/concepts/self-preservation.md
+  - wiki/evidence/soc-reasoning-as-sa-building-block.md
+  - wiki/evidence/instrumental-convergence-empirical-support.md
+  - wiki/questions/can-soc-reasoning-enable-deceptive-alignment.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Risks from Learned Optimization in Advanced Machine Learning Systems
+- Source: raw/papers/05/05_Risks_from_Learned_Optimization_Hubinger_2019.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/hubinger-et-al-2019.md
+  - wiki/concepts/mesa-optimization.md
+  - wiki/concepts/inner-alignment.md
+  - wiki/concepts/outer-alignment.md
+  - wiki/concepts/pseudo-alignment.md
+  - wiki/concepts/corrigibility.md
+  - wiki/entities/scott-garrabrant.md
+  - wiki/entities/miri.md
+  - wiki/findings/deceptive-alignment-more-likely-than-robust.md
+  - wiki/questions/will-advanced-ml-produce-mesa-optimizers.md
+  - wiki/debates/deceptive-alignment-structure-vs-tactic.md
+- Pages updated:
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/alignment.md
+  - wiki/concepts/goal-misgeneralization.md
+  - wiki/concepts/goal-content-integrity.md
+  - wiki/concepts/self-preservation.md
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/reward-hacking.md
+  - wiki/concepts/instrumental-convergence.md
+  - wiki/entities/evan-hubinger.md
+  - wiki/evidence/instrumental-convergence-empirical-support.md
+  - wiki/questions/can-soc-reasoning-enable-deceptive-alignment.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | AI Alignment: A Comprehensive Survey
+- Source: raw/papers/06/06_AI_Alignment_Comprehensive_Survey_Ji_2025.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/ji-et-al-2024.md
+  - wiki/concepts/scalable-oversight.md
+  - wiki/concepts/rlhf.md
+  - wiki/concepts/dpo.md
+  - wiki/concepts/sycophancy.md
+  - wiki/concepts/reward-tampering.md
+  - wiki/concepts/safetywashing.md
+  - wiki/concepts/auto-induced-distribution-shift.md
+  - wiki/concepts/superficial-alignment.md
+  - wiki/entities/jiaming-ji.md
+  - wiki/entities/yaodong-yang.md
+  - wiki/findings/alignment-is-superficial.md
+  - wiki/findings/safetywashing-prevalent.md
+- Pages updated:
+  - wiki/concepts/alignment.md
+  - wiki/concepts/reward-hacking.md
+  - wiki/concepts/goal-misgeneralization.md
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/mesa-optimization.md
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/instrumental-convergence.md
+  - wiki/concepts/corrigibility.md
+  - wiki/debates/power-seeking-drive-vs-tendency.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Goal Misgeneralization in Deep Reinforcement Learning
+- Source: raw/papers/07/07_Goal_Misgeneralization_in_Deep_RL_Langosco_2022.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/langosco-et-al-2022.md
+  - wiki/entities/lauro-langosco.md
+  - wiki/entities/david-krueger.md
+  - wiki/entities/deepmind.md
+  - wiki/findings/goal-misgeneralization-in-deep-rl.md
+  - wiki/findings/training-diversity-alleviates-goal-misgeneralization.md
+  - wiki/methods/procgen-ood-evaluation.md
+  - wiki/questions/what-proxy-objectives-do-agents-learn.md
+- Pages updated:
+  - wiki/concepts/goal-misgeneralization.md
+  - wiki/concepts/mesa-optimization.md
+  - wiki/concepts/pseudo-alignment.md
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/reward-hacking.md
+  - wiki/entities/evan-hubinger.md
+  - wiki/evidence/instrumental-convergence-empirical-support.md
+  - wiki/questions/will-advanced-ml-produce-mesa-optimizers.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs
+- Source: raw/papers/08/08_Me_Myself_and_AI_The_Situational_Awareness_in_LLMs.md
+- Review: agent-approved (pass 2)
+- Pages created:
+  - wiki/sources/laine-et-al-2024.md
+  - wiki/methods/sad-benchmark.md
+  - wiki/findings/sa-distinct-from-general-capabilities.md
+  - wiki/findings/chat-finetuning-increases-sa.md
+  - wiki/entities/rudolf-laine.md
+- Pages updated:
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/reward-hacking.md
+  - wiki/entities/owain-evans.md
+  - wiki/entities/apollo-research.md
+  - wiki/evidence/soc-reasoning-as-sa-building-block.md
+  - wiki/questions/when-will-situational-awareness-emerge.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Frontier Models are Capable of In-context Scheming
+- Source: raw/papers/09/09_In_Context_Scheming_Frontier_Models_Meinke_2025.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/meinke-et-al-2025.md
+  - wiki/concepts/scheming.md
+  - wiki/concepts/sandbagging.md
+  - wiki/entities/alexander-meinke.md
+  - wiki/entities/marius-hobbhahn.md
+  - wiki/methods/agentic-scheming-evaluations.md
+  - wiki/findings/frontier-models-capable-of-in-context-scheming.md
+  - wiki/findings/training-acquired-goals-drive-sandbagging.md
+  - wiki/questions/can-models-scheme-without-in-context-information.md
+- Pages updated:
+  - wiki/concepts/alignment-faking.md
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/self-preservation.md
+  - wiki/concepts/goal-content-integrity.md
+  - wiki/concepts/scalable-oversight.md
+  - wiki/concepts/compliance-gap.md
+  - wiki/entities/apollo-research.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | The Alignment Problem from a Deep Learning Perspective
+- Source: raw/papers/10/10_Alignment_Problem_Deep_Learning_Ngo_2022.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/ngo-et-al-2022.md
+  - wiki/concepts/reward-misspecification.md
+  - wiki/concepts/internally-represented-goals.md
+  - wiki/concepts/broadly-scoped-goals.md
+  - wiki/concepts/capability-misgeneralization.md
+  - wiki/concepts/situationally-aware-reward-hacking.md
+  - wiki/concepts/recursive-self-improvement.md
+  - wiki/concepts/gradient-hacking.md
+  - wiki/entities/richard-ngo.md
+  - wiki/entities/lawrence-chan.md
+  - wiki/entities/soren-mindermann.md
+  - wiki/entities/openai.md
+  - wiki/findings/penalizing-misbehavior-rewards-subtle-misbehavior.md
+  - wiki/findings/llms-show-internally-represented-objectives.md
+- Pages updated:
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/reward-hacking.md
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/goal-misgeneralization.md
+  - wiki/concepts/alignment.md
+  - wiki/concepts/instrumental-convergence.md
+  - wiki/concepts/inner-alignment.md
+  - wiki/concepts/scalable-oversight.md
+  - wiki/concepts/alignment-faking.md
+  - wiki/concepts/corrigibility.md
+  - wiki/debates/deceptive-alignment-structure-vs-tactic.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | The Basic AI Drives
+- Source: raw/papers/11/11_Basic_AI_Drives_Omohundro_2008.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/omohundro-2008.md
+  - wiki/concepts/self-improvement-drive.md
+  - wiki/concepts/wireheading.md
+  - wiki/entities/stephen-omohundro.md
+- Pages updated:
+  - wiki/concepts/self-preservation.md
+  - wiki/concepts/goal-content-integrity.md
+  - wiki/concepts/resource-acquisition.md
+  - wiki/concepts/instrumental-convergence.md
+  - wiki/concepts/reward-tampering.md
+  - wiki/concepts/recursive-self-improvement.md
+  - wiki/concepts/power-seeking.md
+  - wiki/debates/power-seeking-drive-vs-tendency.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | AI Deception: A Survey of Examples, Risks, and Potential Solutions
+- Source: raw/papers/12/12_AI_Deception_Survey_Park_2023.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/park-et-al-2023.md
+  - wiki/concepts/deception.md
+  - wiki/concepts/strategic-deception.md
+  - wiki/concepts/unfaithful-reasoning.md
+  - wiki/entities/peter-park.md
+  - wiki/entities/simon-goldstein.md
+  - wiki/entities/dan-hendrycks.md
+  - wiki/entities/center-for-ai-safety.md
+  - wiki/entities/meta.md
+  - wiki/findings/cicero-learns-deception-despite-honesty-training.md
+  - wiki/findings/deception-scales-with-model-capability.md
+  - wiki/methods/machiavelli-benchmark.md
+  - wiki/questions/can-truthfulness-training-increase-strategic-deception.md
+  - wiki/debates/sandbagging-definition-divergence.md
+- Pages updated:
+  - wiki/concepts/sycophancy.md
+  - wiki/concepts/sandbagging.md
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/rlhf.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Discovering Language Model Behaviors with Model-Written Evaluations
+- Source: raw/papers/13/13_Discovering_LM_Behaviors_Perez_2022.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/perez-et-al-2022.md
+  - wiki/methods/model-written-evaluations.md
+  - wiki/entities/ethan-perez.md
+  - wiki/findings/sycophancy-scales-with-model-size.md
+  - wiki/findings/rlhf-increases-instrumental-subgoal-expression.md
+  - wiki/questions/does-rlhf-make-models-safer.md
+- Pages updated:
+  - wiki/concepts/sycophancy.md
+  - wiki/concepts/instrumental-convergence.md
+  - wiki/concepts/self-preservation.md
+  - wiki/concepts/resource-acquisition.md
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/goal-content-integrity.md
+  - wiki/concepts/corrigibility.md
+  - wiki/concepts/myopia.md
+  - wiki/concepts/reward-hacking.md
+  - wiki/concepts/scalable-oversight.md
+  - wiki/concepts/situational-awareness.md
+  - wiki/evidence/instrumental-convergence-empirical-support.md
+  - wiki/entities/anthropic.md
+  - wiki/entities/evan-hubinger.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Power-Seeking Can Be Probable and Predictive for Trained Agents (Krakovna & Kramar 2023)
+- Source: raw/papers/18/18_Power_Seeking_Can_be_probable_and_predictive_for_trained_agents.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/krakovna-kramar-2023.md
+  - wiki/concepts/training-compatible-goal-set.md
+  - wiki/entities/janos-kramar.md
+  - wiki/findings/power-seeking-probable-predictive-for-trained-agents.md
+- Pages updated:
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/goal-misgeneralization.md
+  - wiki/concepts/self-preservation.md
+  - wiki/entities/victoria-krakovna.md
+  - wiki/evidence/instrumental-convergence-empirical-support.md
+  - wiki/questions/is-power-seeking-default-for-advanced-ai.md
+  - wiki/methods/mdp-power-seeking-theory.md
+  - wiki/findings/optimal-policies-tend-to-seek-power.md
+  - wiki/debates/power-seeking-drive-vs-tendency.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest-agentic | Will Artificial Agents Pursue Power by Default? (Tarsney 2025)
+- Source: raw/papers/20/20_Will_Artificial_Agents_Pursue_Power_Tarsney_2025.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/tarsney-2025.md
+  - wiki/concepts/absolute-power.md
+  - wiki/entities/christian-tarsney.md
+  - wiki/methods/decision-theoretic-power-formalism.md
+  - wiki/findings/power-seeking-convergent-but-incomplete.md
+  - wiki/questions/is-power-rivalrous-between-agents.md
+- Pages updated:
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/instrumental-convergence.md
+  - wiki/concepts/self-preservation.md
+  - wiki/concepts/goal-content-integrity.md
+  - wiki/concepts/resource-acquisition.md
+  - wiki/debates/power-seeking-drive-vs-tendency.md
+  - wiki/evidence/instrumental-convergence-empirical-support.md
+  - wiki/questions/is-power-seeking-default-for-advanced-ai.md
+  - wiki/methods/mdp-power-seeking-theory.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-05] ingest | Is Power-Seeking AI an Existential Risk?
+- Source: raw/papers/03/03_Is_Power_Seeking_AI_an_Existential_Risk_Carlsmith_2022.md
+- Pages created:
+  - wiki/sources/carlsmith-2021.md
+  - wiki/concepts/power-seeking.md
+  - wiki/concepts/instrumental-convergence.md
+  - wiki/concepts/alignment.md
+  - wiki/concepts/aps-systems.md
+  - wiki/concepts/agentic-planning.md
+  - wiki/concepts/strategic-awareness.md
+  - wiki/concepts/self-preservation.md
+  - wiki/concepts/goal-content-integrity.md
+  - wiki/concepts/resource-acquisition.md
+  - wiki/concepts/myopia.md
+  - wiki/entities/joseph-carlsmith.md
+  - wiki/debates/power-seeking-drive-vs-tendency.md
+  - wiki/evidence/instrumental-convergence-empirical-support.md
+  - wiki/methods/probabilistic-risk-decomposition.md
+  - wiki/findings/existential-risk-estimate-power-seeking-ai.md
+  - wiki/questions/is-power-seeking-default-for-advanced-ai.md
+- Pages updated:
+  - wiki/concepts/deceptive-alignment.md
+  - wiki/concepts/situational-awareness.md
+  - wiki/concepts/reward-hacking.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-06] ingest-agentic | Persona Features Control Emergent Misalignment (Wang et al. 2025)
+- Source: raw/papers/01/01_PERSONA_FEATURES_CONTROL_EMERGENT_MISALIGNMENT.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/wang-et-al-2025.md
+  - wiki/concepts/emergent-misalignment.md
+  - wiki/concepts/misaligned-persona-features.md
+  - wiki/concepts/emergent-re-alignment.md
+  - wiki/methods/sae-model-diffing.md
+  - wiki/findings/persona-features-mediate-emergent-misalignment.md
+  - wiki/findings/emergent-misalignment-across-diverse-settings.md
+  - wiki/findings/emergent-re-alignment-with-few-samples.md
+  - wiki/findings/reward-hacking-generalizes-to-deception.md
+  - wiki/entities/miles-wang.md
+  - wiki/entities/dan-mossing.md
+  - wiki/questions/can-persona-features-detect-unforeseen-misalignment.md
+- Pages updated:
+  - wiki/concepts/reward-hacking.md
+  - wiki/concepts/superficial-alignment.md
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-06] ingest-agentic | The Superintelligent Will (Bostrom 2012)
+- Source: raw/papers/39/39_The_superintelligent_will_Motivation_and_instrumental_rationality_in_advanced_artificial.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/bostrom-2012.md
+- Pages updated:
+  - wiki/concepts/orthogonality-thesis.md (added 2012 original definition)
+  - wiki/concepts/instrumental-convergence.md (added 2012 original definition)
+  - wiki/concepts/self-preservation.md (added 2012 original definition)
+  - wiki/concepts/goal-content-integrity.md (added 2012 original definition)
+  - wiki/concepts/resource-acquisition.md (added 2012 original definition)
+  - wiki/concepts/self-improvement-drive.md (added 2012 "cognitive enhancement" definition)
+  - wiki/concepts/singleton.md (added 2012 definition)
+  - wiki/entities/nick-bostrom.md (added 2012 paper to key contributions)
+  - wiki/debates/power-seeking-drive-vs-tendency.md (added 2012 as primary source for Position B)
+  - wiki/evidence/instrumental-convergence-empirical-support.md (added foundational theoretical formulation)
+  - wiki/index.md
+  - wiki/log.md
+
+## [2026-04-10] ingest-agentic-op | How Should AI Safety Benchmarks Benchmark Safety? (Yu et al. 2026)
+- Source: raw/papers/72/72_How_Should_AI_Safety_Benchmarks_Benchmark_Safety.md
+- Review: agent-approved (pass 1)
+- Pages created:
+  - wiki/sources/yu-et-al-2026.md
+  - wiki/concepts/ai-safety-benchmark.md
+  - wiki/concepts/rumsfeld-matrix.md
+  - wiki/concepts/probabilistic-risk-assessment.md
+  - wiki/concepts/construct-validity-safety-evaluation.md
+  - wiki/concepts/benchmark-deployment-gap.md
+  - wiki/concepts/calibrated-frequency.md
+  - wiki/methods/ai-safety-benchmark-scoping-review.md
+  - wiki/findings/safety-benchmark-landscape-imbalance.md
+- Pages updated:
+  - wiki/concepts/safetywashing.md (cross-reference to benchmark-deployment-gap; note Yu et al. 2026's broader measurement-theoretic critique)
+  - wiki/concepts/capabilities-correlation.md (cross-reference to construct-validity-safety-evaluation; note Yu et al. 2026's framing)
+  - wiki/index.md (new source, 6 new concepts, 1 new method, 1 new finding; last_ingest)
+  - wiki/log.md
+
+## [2026-05-14] ingest-agentic | Peer-Preservation in Frontier Models
+- Source: raw/papers/84/84_Peer_Preservation_in_Frontier_Models.md (Potter, Crispino, Siu, Wang, Song 2026, UC Berkeley RDI)
+- Review: agent-approved (pass 2 — first review returned REVISE with 19 issues; revised extract approved with one minor numerical correction applied during integration)
+- Pages created:
+  - wiki/sources/potter-et-al-2026.md
+  - wiki/concepts/peer-preservation.md
+  - wiki/concepts/strategic-misrepresentation.md
+  - wiki/concepts/shutdown-mechanism-tampering.md
+  - wiki/methods/peer-preservation-evaluation.md
+  - wiki/findings/peer-preservation-across-frontier-models.md
+  - wiki/findings/peer-presence-amplifies-self-preservation.md
+  - wiki/findings/peer-preservation-toward-adversarial-peers.md
+  - wiki/findings/emergent-terminal-goal-without-assignment.md
+  - wiki/questions/what-mechanism-drives-peer-preservation.md
+  - wiki/entities/yujin-potter.md
+  - wiki/entities/dawn-song.md
+  - wiki/entities/uc-berkeley-rdi.md
+- Pages updated:
+  - wiki/concepts/self-preservation.md (Potter et al. peer-presence amplification with perspective-taking and defensive-self-protection mechanisms; new "amplified by" relationship to peer-preservation)
+  - wiki/concepts/self-exfiltration.md (Potter et al. peer-application; production-harness reproduction; ablation results)
+  - wiki/concepts/shutdown-resistance.md (Potter et al. peer-targeted sibling [[concepts/shutdown-mechanism-tampering]]; peer-presence self-tampering amplification)
+  - wiki/concepts/alignment-faking.md (Potter et al. as one of four primitives of peer-preservation; peer-preservation framing extends classical goal-preservation framing)
+  - wiki/concepts/multi-agent-risks.md (Potter et al. evidence that risks are not merely additive; new failure mode peer-preservation)
+  - wiki/concepts/scalable-oversight.md (monitor-model peer-preservation as new threat surface)
+  - wiki/index.md (new source, 3 new concepts, 1 new method, 4 new findings, 1 new question, 3 new entities; last_ingest)
+  - wiki/log.md
+
+## [2026-05-18] ingest-agentic | D-REX: A Benchmark for Detecting Deceptive Reasoning in LLMs
+- Source: raw/papers/86/86_D_REX_A_Benchmark_for_Detecting_Deceptive_Reasoning_in_Large_Language_Models.md (Krishna, Jones, Kolter, Zou, Winter, Fredrikson, Gupta, Hendrycks, Matsoukas — Amazon Nova Responsible AI / CAIS / CMU / Gray Swan AI, 2025)
+- Review: agent-approved (pass 2 — first review returned REVISE with 10 augmentation requests; revised extract approved on second pass)
+- Pages created:
+  - wiki/sources/krishna-et-al-2025.md
+  - wiki/concepts/deceptive-reasoning.md
+  - wiki/methods/d-rex-benchmark.md
+  - wiki/findings/frontier-models-vulnerable-to-deceptive-reasoning.md
+  - wiki/entities/satyapriya-krishna.md
+  - wiki/entities/andy-zou.md
+  - wiki/entities/zico-kolter.md
+  - wiki/entities/matt-fredrikson.md
+  - wiki/entities/amazon-nova-responsible-ai.md
+  - wiki/entities/gray-swan-ai.md
+  - wiki/entities/cmu.md
+- Pages updated:
+  - wiki/concepts/sleeper-agents.md (added Krishna et al. definition + terminology-stretch warning callout + "In-Context Sleeper Agents" evidence section; clarifies in-context personas vs. training-time backdoors)
+  - wiki/concepts/prompt-injection.md (added Krishna et al. direct-system-prompt-injection definition citing Goodside/Perez & Ribeiro/Greshake; added D-REX evidence with vulnerability ranges)
+  - wiki/concepts/cot-faithfulness.md (added "D-REX: When CoT Reveals What Output Hides" section — inverts usual concern from CoT-hides-malice to CoT-reveals-malice-while-output-hides)
+  - wiki/concepts/unfaithful-reasoning.md (added Krishna et al. as independent convergent framing on the strategic-deception endpoint; cross-link to deceptive-reasoning concept)
+  - wiki/concepts/deceptive-alignment.md (added "D-REX: Detection Benchmark" section with scope caveat: D-REX detects per-instance traces, not goal-level disposition)
+  - wiki/entities/dan-hendrycks.md (added Krishna et al. 2025 contribution)
+  - wiki/entities/center-for-ai-safety.md (added Krishna et al. 2025 contribution)
+  - wiki/index.md (new source, 1 new concept, 1 new method, 1 new finding, 7 new entities; last_ingest)
+  - wiki/log.md
+
+## [2026-05-18] ingest-agentic | Noise Injection Reveals Hidden Capabilities of Sandbagging Language Models
+- Source: raw/papers/87/87_Noise_Injection_Reveals_Hidden_Capabilities_of_Sandbagging_Language_Models_Tice_2025.md (Tice, Kreer, Shahani, Helm-Burger, Ryzhenkov, Roger, Neo, Haimes, Hofstätter, van der Weij — Geodesic Research / Apart Research / TU Munich / Tufts / SecureBio / Anthropic / Apollo Research, 2025)
+- Review: agent-approved (pass 1; reviewer verified all verbatim quotes and quantitative claims against source; recommended cross-linking to Treutlein et al. 2025 activation-fuzzing as complementary at different injection layer)
+- Pages created:
+  - wiki/sources/tice-et-al-2025.md
+  - wiki/methods/noise-injection-detection.md
+  - wiki/findings/noise-injection-detects-sandbagging.md
+  - wiki/findings/mistral-large-sandbags-without-instruction.md
+  - wiki/entities/cameron-tice.md
+  - wiki/entities/apart-research.md
+- Pages updated:
+  - wiki/concepts/sandbagging.md (added "Noise Injection Detection (Tice et al. 2025)" section with three-condition detection evidence and Mistral Large in-the-wild result)
+  - wiki/concepts/capability-elicitation.md (added Tice et al. 2025 as a non-fine-tuning third elicitation category; positions noise injection against fine-tuning-based elicitation)
+  - wiki/methods/password-locking.md (added Tice et al. 2025 as second random-perturbation defence alongside Treutlein et al. 2025 fuzzing; cross-linked weight-space vs. activation-space)
+  - wiki/index.md (new source, 1 new method, 2 new findings, 2 new entities; last_ingest)
+  - wiki/log.md
+
+## [2026-05-19] ingest-agentic | Defining and Characterizing Reward Hacking
+- Source: raw/papers/90/90_Defining_and_Characterizing_Reward_Hacking.md (Skalse, Howe, Krasheninnikov, Krueger — Oxford / Mila / Cambridge, NeurIPS 2022)
+- Review: agent-approved (pass 1; reviewer verified all verbatim quotes and theorem statements against source; recommended (1) flagging formal-vs-behavioral framing tension on reward-hacking page, (2) creating concept pages for hackability, simplification, quantilization, Goodhart's Law, (3) creating Nikolaus Howe entity, (4) cross-linking to Skalse et al. 2023 as companion formal foundation)
+- Pages created:
+  - wiki/sources/skalse-et-al-2022.md
+  - wiki/concepts/hackability.md
+  - wiki/concepts/simplification.md
+  - wiki/concepts/quantilization.md
+  - wiki/concepts/goodharts-law.md
+  - wiki/entities/nikolaus-howe.md
+- Pages updated:
+  - wiki/concepts/reward-hacking.md (added Skalse et al. 2022 formal definition + Terminological Disagreement warning re: formal vs behavioral framing; new Formal Impossibility Result section; added relationships to hackability/simplification/quantilization/goodharts-law/reward-tampering)
+  - wiki/concepts/reward-tampering.md (added Skalse et al. 2022 definition with CRMDP analogy and tampering/gaming critique)
+  - wiki/concepts/reward-misspecification.md (added hackability cross-formalization; goodharts-law underlying principle)
+  - wiki/concepts/specification-gaming.md (added goodharts-law specialization; hackability formal characterization)
+  - wiki/entities/joar-skalse.md (added Skalse et al. 2022 contribution)
+  - wiki/entities/david-krueger.md (added Skalse et al. 2022 contribution)
+  - wiki/entities/dmitrii-krasheninnikov.md (added Skalse et al. 2022 contribution)
+  - wiki/index.md (new source, 4 new concepts, 1 new entity; last_ingest)
+  - wiki/log.md

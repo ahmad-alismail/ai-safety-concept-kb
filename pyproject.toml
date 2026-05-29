@@ -1,0 +1,19 @@
+[project]
+name = "ai-safety-concept-kb"
+version = "0.1.0"
+description = "AI Safety Conceptual Taxonomy — Research Wiki"
+requires-python = ">=3.11"
+dependencies = [
+    "marker-pdf[full]>=1.10.0",
+    "pdfminer.six==20251230",
+    "pdfplumber==0.11.9",
+    "pdftext==0.6.3",
+    "pypdf==6.9.2",
+    "pypdfium2==4.30.0",
+    "surya-ocr==0.17.1",
+    "torch==2.11.0",
+    "torchvision==0.26.0",
+]
+
+[tool.uv]
+extra-index-url = ["https://download.pytorch.org/whl/cu130"]
