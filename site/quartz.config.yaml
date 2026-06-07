@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
-# Quartz config for the AI Safety Conceptual Taxonomy wiki.
+# Quartz config for the AI Safety Concept Knowledge Base wiki.
 # Based on quartz.config.default.yaml with project-specific overrides:
 #   - pageTitle / baseUrl / footer links
 #   - analytics disabled
 #   - crawl-links markdownLinkResolution: absolute (wiki links are fully path-qualified)
 #   - cname plugin disabled (hosted on github.io subpath, no custom domain)
 configuration:
-  pageTitle: AI Safety Conceptual Taxonomy
+  pageTitle: AI Safety Concept Knowledge Base
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -135,6 +135,38 @@ plugins:
       priority: 50
   - source: github:quartz-community/graph
     enabled: true
+    options:
+      localGraph:
+        showTags: false
+      globalGraph:
+        showTags: false
+      # Obsidian-style color groups (first match wins), mirrored from
+      # wiki/.obsidian/graph.json. Tag groups color concept pages by their
+      # conceptual type; path groups color pages by folder. Unmatched nodes
+      # stay gray.
+      colorGroups:
+        - color: "#E8555A" # behavior
+          tags: [behavior]
+        - color: "#4A9EFF" # capability
+          tags: [capability]
+        - color: "#F0A500" # instrumental goal / convergent drive
+          tags: [instrumental-goal, convergent-drive]
+        - color: "#A78BFA" # tactic / compound tactic
+          tags: [tactic, compound-tactic]
+        - color: "#FF6B6B" # failure mode
+          tags: [failure-mode]
+        - color: "#6366F1" # safety/alignment property
+          tags: [safety-property, alignment-property]
+        - color: "#B2F9A9" # technique / method
+          tags: [technique, method]
+        - color: "#FF3366" # debates
+          paths: [debates/]
+        - color: "#6B7280" # sources
+          paths: [sources/]
+        - color: "#4B5563" # methods & evidence
+          paths: [methods/, evidence/]
+        - color: "#00EB04" # entities
+          paths: [entities/]
     layout:
       position: right
       priority: 10

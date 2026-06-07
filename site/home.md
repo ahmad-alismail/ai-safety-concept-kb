@@ -1,16 +1,22 @@
 ---
-title: "AI Safety Conceptual Taxonomy"
+title: "AI Safety Concept Knowledge Base"
 type: index
 tags: [home]
 date_created: 2026-06-07
-date_modified: 2026-06-07
+date_modified: 2026-06-08
 ---
 
-# AI Safety Conceptual Taxonomy
+# AI Safety Concept Knowledge Base
 
 Is *power-seeking* a behavior? An instrumental goal? A tendency, a drive, a capability, or a risk? Depending on which paper you open, it's any of them.
 
-This wiki maps how AI safety concepts — power-seeking, deception, scheming, alignment faking, sandbagging, situational awareness — relate, overlap, and **contradict** across **84 primary sources**: ~780 interlinked pages connected by 7,500+ wikilinks, built and maintained by an LLM ingesting one source at a time. It surfaces exactly where sources agree and where they quietly contradict each other, working toward a coherent ontology of AI safety concepts.
+This knowledge base maps how AI safety concepts — power-seeking, deception, scheming, alignment faking, sandbagging, situational awareness — relate, overlap, and **contradict** across **84 primary sources**: ~780 interlinked pages connected by 7,500+ wikilinks, built and maintained by an LLM ingesting one source at a time. It surfaces exactly where sources agree and where they quietly contradict each other, working toward a coherent ontology of AI safety concepts.
+
+## The Conceptual Web
+
+Every node is a page; every edge a wikilink. Colors mark conceptual type (behaviors, capabilities, instrumental goals, tactics, failure modes, safety properties, techniques) and provenance (debates, sources, methods, entities). Drag, zoom, click a node to visit its page.
+
+<div class="graph-embed"></div>
 
 > [!tip] How to explore
 > Every page links to its sources and related concepts. Use **search** (Ctrl/⌘ K), the **graph view**, and **backlinks** in the sidebar to follow the conceptual web.

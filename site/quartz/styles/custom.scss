@@ -1,3 +1,14 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// Large in-page global graph on the landing page (rendered into
+// <div class="graph-embed"> by the graph plugin's inline script).
+.graph-embed {
+  height: 600px;
+  max-height: 75vh;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+
+  @media all and #{$mobile} {
+    height: 420px;
+  }
+}
