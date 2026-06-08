@@ -8,14 +8,6 @@
   <a href="https://notebooklm.google.com/notebook/bb18bcc1-096c-40db-b076-f6527624bb5e/artifact/c44a0b27-ad01-4434-aff9-57a358348737?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_" target="_blank">🎧 NotebookLM Audio</a>
 </p>
 
-![Overview poster: Misaligned Behaviors and Dangerous Capabilities in AI Safety — A Conceptual Cross-Source Analysis](imgs/poster.png)
-
-## The Problem
-
-Is *power-seeking* a behavior? An instrumental goal? A tendency, a drive, a capability, or a risk? Depending on which paper you open, it's any of them. AI safety has a fast-growing vocabulary — deception, scheming, sandbagging, situational awareness, alignment faking — but no shared framework for how these concepts fit together. The same term means different things to different labs; different terms sometimes mean the same thing. Compound tactics get treated as if they were primitive behaviors.
-
-This project builds a structured, interlinked knowledge base from the literature that surfaces exactly **where sources agree and where they quietly contradict each other** — working toward a coherent ontology of AI safety concepts.
-
 ## Authors
 
 | Author | Affiliation | Contact |
@@ -27,38 +19,21 @@ This project builds a structured, interlinked knowledge base from the literature
 
 ## What's in This Repo
 
-| | | |
-|---|---|---|
-| 📚 **The wiki** (`wiki/`) | An LLM-maintained knowledge base built incrementally from 84 AI safety sources: **774 interlinked pages** (189 concepts, plus source summaries, entity profiles, debates, evidence maps, methods, findings, and open questions) connected by **7,583 wikilinks**. | Start at `wiki/index.md` |
-| 📄 **The raw sources** (`raw/`) | The markdown the wiki was built from. Source PDFs are **not redistributed** (copyright) — `raw/papers/` holds each source's Marker-converted markdown, and `staging-area/` holds PDFs before conversion. Add your own to reproduce or extend. | See [Setup](#setup) |
-| 🧩 **The schema** (`CLAUDE.md` + `.claude/skills/`) | Conventions, page templates, and workflows that govern how the LLM operates on the wiki. This is the reusable machinery — point it at a different field and it works the same way. | See [How It Works](#how-it-works) |
-| 📝 **The paper** | The academic write-up of the method and findings: what the wiki revealed about terminological confusion in the field. | [link forthcoming](#) |
-
-## Wiki Contents
-
-The wiki was built by ingesting 84 sources one at a time. Each source typically touched 10+ pages. After ingestion:
-
-| Page Type | Count | Description |
-|-----------|------:|-------------|
-| Sources | 84 | One summary per ingested paper/article |
-| Concepts | 189 | One page per AI safety concept, with each source's definition |
-| Entities | 191 | Authors, labs, and research groups |
-| Findings | 176 | Key results extracted across sources |
-| Methods | 73 | Evaluation methods and methodologies |
-| Open questions | 51 | Research questions and gaps |
-| Debates | 7 | Dedicated pages where sources conflict |
-| Evidence maps | 3 | Structured evidence for/against specific claims |
-| **Total** | **774** | Connected by **7,583** cross-references (wikilinks) |
-
-Start with `wiki/index.md` for the full catalog, or `wiki/overview.md` for a high-level synthesis.
-
-### Browsing the Wiki
-
-The wiki uses Obsidian-style wikilinks (`[[concepts/power-seeking]]`), so we recommend opening `wiki/` as a vault in **[Obsidian](https://obsidian.md/)** — graph view and backlinks work out of the box, making the 774 interlinked pages easy to navigate. Any markdown editor works for plain reading, but Obsidian gives you the full cross-referencing experience.
+| | |
+|---|---|
+| 📚 **The wiki** (`wiki/`) | An LLM-maintained knowledge base built incrementally from 84 AI safety sources — **774 interlinked pages** connected by **7,583 wikilinks**. Start at `wiki/index.md`. |
+| 📄 **The raw sources** (`raw/`) | The markdown the wiki was built from. Source PDFs are **not redistributed** (copyright); `raw/papers/` holds each source's Marker-converted markdown, and `staging-area/` holds PDFs before conversion. |
+| 🌐 **The website** (`site/`) | A [Quartz](https://quartz.jzhao.xyz) static site that publishes the wiki as the [public knowledge base](https://ahmad-alismail.github.io/ai-safety-concept-kb/). |
+| 🧩 **The schema** (`CLAUDE.md` + `.claude/skills/`) | Conventions, page templates, and workflows that govern how the LLM operates on the wiki. Reusable machinery — point it at a different field and it works the same way. |
+| 📝 **The paper** | The academic write-up of the method and findings. [link forthcoming](#) |
 
 ## How It Works
 
-Instead of retrieving from raw documents at query time (like RAG), the LLM **incrementally builds and maintains a persistent wiki**. When you add a source, the LLM reads it, extracts structured data, and integrates it into the existing wiki — updating concept pages, revising summaries, flagging contradictions, and strengthening or challenging the evolving synthesis.
+Most LLM workflows are stateless. You upload documents, the LLM retrieves relevant chunks, generates an answer, and forgets everything. Ask a question that requires synthesizing five sources, and it pieces them together from scratch every time. Nothing accumulates. RAG, ChatGPT file uploads, NotebookLM — they all work this way.
+
+This project takes a different approach. Instead of retrieving from raw documents at query time, the LLM **incrementally builds and maintains a persistent wiki** — a structured, interlinked collection of markdown files that sits between you and the raw sources. When you add a source, the LLM reads it, extracts the key information, and integrates it into the existing wiki: updating concept pages, revising summaries, flagging contradictions, and strengthening or challenging the evolving synthesis. Knowledge is compiled once and kept current, not re-derived on every query.
+
+The result is a persistent, compounding artifact. Cross-references are already there. Contradictions have been flagged. The synthesis reflects everything ingested so far, and each new source enriches the existing structure. The human curates sources and asks questions; the LLM does the summarizing, cross-referencing, and bookkeeping.
 
 ### Architecture
 
@@ -90,22 +65,17 @@ Three layers. The human owns the top and bottom; the LLM owns the middle.
 wiki/                 # LLM-generated knowledge base (774 pages)
   index.md            #   content catalog — start here
   overview.md         #   high-level synthesis
-  concepts/           #   one page per AI safety concept (189 pages)
-  sources/            #   one summary per ingested source (84 pages)
-  entities/           #   authors, labs, research groups (191 pages)
+  concepts/           #   one page per AI safety concept
+  sources/            #   one summary per ingested source
+  entities/           #   authors, labs, research groups
   debates/            #   disagreement pages between sources
-  evidence/           #   evidence maps for specific claims
-  methods/            #   evaluation methods and methodologies
-  findings/           #   key findings across sources
-  questions/          #   open questions and research gaps
-  comparisons/        #   generated comparison tables
+  evidence/ methods/ findings/ questions/ comparisons/
 
 raw/                  # Source markdown (original PDFs NOT redistributed — copyright)
-  papers/             #   Marker-converted markdown of each source (add your own)
-  articles/           #   web-clipped markdown
-  assets/             #   downloaded images
+  papers/ articles/ assets/
 
-staging-area/         # Original PDFs, placed here before conversion to markdown
+staging-area/         # Original PDFs, before conversion to markdown
+site/                 # Quartz static site that publishes the wiki
 
 CLAUDE.md             # Schema — conventions, templates, domain guidance
 .claude/skills/       # Workflow definitions (ingest, query, lint, etc.)
