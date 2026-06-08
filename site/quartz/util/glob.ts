@@ -15,7 +15,11 @@ export async function glob(
     await globby(pattern, {
       cwd,
       ignore: ignorePatterns,
-      gitignore: true,
+      // gitignore disabled: content/ is generated from ../wiki and is git-ignored,
+      // but globby honors ancestor .gitignore files, which would exclude the whole
+      // folder from scanning. All needed exclusions are declared in
+      // quartz.config.ts -> ignorePatterns instead.
+      gitignore: false,
     })
   ).map(toPosixPath)
   return fps as FilePath[]

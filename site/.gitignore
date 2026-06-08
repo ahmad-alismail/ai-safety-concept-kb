@@ -1,10 +1,16 @@
-.DS_Store
+# Quartz build artifacts
 node_modules
 public
+.quartz-cache
 prof
 tsconfig.tsbuildinfo
+
+# Generated from ../wiki by sync-content.mjs — never hand-edit, never commit
+content
+
+# Misc
+.DS_Store
 .obsidian
-.quartz-cache
 private/
-.quartz/
-quartz/cli/tui/dist/
+.replit
+replit.nix

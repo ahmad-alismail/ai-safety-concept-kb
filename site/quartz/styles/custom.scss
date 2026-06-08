@@ -1,14 +1,288 @@
-@use "./variables.scss" as *;
+@use "./base.scss";
 
-// Large in-page global graph on the landing page (rendered into
-// <div class="graph-embed"> by the graph plugin's inline script).
-.graph-embed {
-  height: 600px;
-  max-height: 75vh;
-  margin: 1.5rem 0;
-  border-radius: 8px;
+/* ============================================================================
+   Refined editorial theme — polish layered on top of Quartz's base styles.
 
-  @media all and #{$mobile} {
-    height: 420px;
+   The colour palette (warm neutrals + teal-green accent, dark default) lives in
+   quartz.config.ts. This file adds what a palette alone can't: typographic
+   hierarchy, depth (borders + soft shadows), and hover/active feedback.
+
+   Everything keys off Quartz's CSS variables (--light, --dark, --darkgray,
+   --gray, --lightgray, --secondary, --tertiary, --highlight) so both light and
+   dark modes stay in sync automatically.
+   ========================================================================== */
+
+:root {
+  --ed-radius: 10px;
+  --ed-shadow: 0 1px 2px rgba(17, 24, 21, 0.04), 0 6px 16px rgba(17, 24, 21, 0.06);
+  --ed-shadow-hover: 0 2px 4px rgba(17, 24, 21, 0.06), 0 12px 28px rgba(17, 24, 21, 0.1);
+}
+:root[saved-theme="dark"] {
+  --ed-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 18px rgba(0, 0, 0, 0.36);
+  --ed-shadow-hover: 0 2px 6px rgba(0, 0, 0, 0.4), 0 14px 34px rgba(0, 0, 0, 0.5);
+}
+
+/* ---- Typographic hierarchy ------------------------------------------------ */
+
+.center {
+  line-height: 1.72;
+}
+
+article {
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5 {
+    color: var(--dark);
+    letter-spacing: -0.012em;
+    line-height: 1.25;
+  }
+
+  & h1 {
+    font-size: 2.1rem;
+    margin-top: 1.5rem;
+  }
+
+  // A hairline rule under every H2 gives long pages a clear, editorial rhythm.
+  & h2 {
+    font-size: 1.5rem;
+    margin-top: 2.4rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--lightgray);
+  }
+
+  & h3 {
+    font-size: 1.18rem;
+    margin-top: 1.8rem;
+  }
+
+  // Lead paragraph: the first paragraph after the title reads as a standfirst.
+  & > p:first-of-type {
+    font-size: 1.08rem;
+    color: color-mix(in srgb, var(--darkgray) 88%, var(--gray));
+  }
+}
+
+/* ---- Links ---------------------------------------------------------------- */
+
+// Prose links (not wikilink pills) get an animated underline on hover.
+article p a:not(.internal):not(.tag-link),
+article li a:not(.internal):not(.tag-link) {
+  background-image: linear-gradient(var(--tertiary), var(--tertiary));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  transition: background-size 0.25s ease, color 0.2s ease;
+  &:hover {
+    background-size: 100% 1.5px;
+  }
+}
+
+// Internal wikilinks keep their tinted pill but read a touch softer / rounder.
+a.internal {
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  &:hover {
+    background-color: color-mix(in srgb, var(--secondary) 18%, transparent);
+  }
+}
+
+/* ---- Page + site titles --------------------------------------------------- */
+
+.page-title {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+/* ---- Callouts (heavily used by this wiki) --------------------------------- */
+
+.callout {
+  border: 1px solid var(--lightgray);
+  border-left: 3px solid var(--callout-color, var(--secondary));
+  border-radius: var(--ed-radius);
+  box-shadow: var(--ed-shadow);
+
+  & .callout-title {
+    font-family: var(--headerFont);
+    letter-spacing: -0.005em;
+  }
+}
+
+/* ---- List / folder pages: turn rows into cards ---------------------------- */
+
+ul.section-ul {
+  margin-top: 1.6em;
+}
+
+li.section-li {
+  margin-bottom: 0.7rem;
+
+  & > .section {
+    padding: 0.85rem 1.1rem;
+    border: 1px solid var(--lightgray);
+    border-radius: var(--ed-radius);
+    background-color: color-mix(in srgb, var(--light) 60%, var(--lightgray) 12%);
+    transition:
+      transform 0.16s ease,
+      box-shadow 0.16s ease,
+      border-color 0.16s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--ed-shadow-hover);
+      border-color: color-mix(in srgb, var(--secondary) 55%, var(--lightgray));
+    }
+
+    & .desc h3 {
+      margin: 0;
+    }
+  }
+}
+
+/* ---- Tags ----------------------------------------------------------------- */
+
+.tags > li > a.internal,
+.tag-link {
+  border: 1px solid var(--lightgray);
+  background-color: transparent;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+  &:hover {
+    border-color: var(--secondary);
+    background-color: var(--highlight);
+  }
+}
+
+/* ---- Explorer (left sidebar) --------------------------------------------- */
+
+.explorer {
+  & ul.overflow li > a,
+  & .folder-container > a {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 5px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    &:hover {
+      background-color: var(--highlight);
+    }
+  }
+
+  // Current page: accent colour + a small leading marker.
+  & a.active {
+    color: var(--secondary);
+    font-weight: 600;
+    background-color: var(--highlight);
+  }
+}
+
+/* ---- Tables --------------------------------------------------------------- */
+
+article table {
+  border-collapse: collapse;
+  border-radius: var(--ed-radius);
+  overflow: hidden;
+  box-shadow: var(--ed-shadow);
+
+  & th {
+    background-color: color-mix(in srgb, var(--secondary) 12%, var(--light));
+    color: var(--dark);
+    font-family: var(--headerFont);
+    letter-spacing: -0.005em;
+  }
+
+  & tbody tr {
+    transition: background-color 0.15s ease;
+    &:hover {
+      background-color: var(--highlight);
+    }
+  }
+}
+
+/* ---- Blockquotes & code --------------------------------------------------- */
+
+article blockquote {
+  border-left: 3px solid var(--secondary);
+  background-color: color-mix(in srgb, var(--secondary) 6%, transparent);
+  border-radius: 0 var(--ed-radius) var(--ed-radius) 0;
+}
+
+article pre {
+  border: 1px solid var(--lightgray);
+  border-radius: var(--ed-radius);
+}
+
+/* ---- Sidebar widgets: graph, TOC, backlinks ------------------------------ */
+
+.graph .graph-outer,
+.backlinks > ul li > a,
+.toc-content {
+  border-radius: var(--ed-radius);
+}
+
+.graph .graph-outer {
+  border: 1px solid var(--lightgray);
+}
+
+/* ---- Landing-page hero ---------------------------------------------------- */
+
+body[data-slug="index"] {
+  & .article-title {
+    font-size: 2.7rem;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.4rem;
+  }
+
+  // Standfirst beneath the hero title.
+  & .center > article > p:first-of-type {
+    font-size: 1.22rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--darkgray) 82%, var(--gray));
+  }
+}
+
+/* ---- Scrollbar (subtle, theme-aware) ------------------------------------- */
+
+::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--gray) 55%, transparent);
+  border-radius: 6px;
+  &:hover {
+    background-color: var(--gray);
+  }
+}
+
+/* ============================================================================
+   Landing page: render the afterBody Graph as a large, full-width concept map.
+   (Pre-existing layout fix — unchanged.)
+   ========================================================================== */
+
+body[data-slug="index"] {
+  // drop the separator between the overview and the embedded graph
+  .center > hr {
+    display: none;
+  }
+
+  .page-footer > .graph {
+    // the markdown "## The concept map" heading already introduces it
+    & > h3 {
+      display: none;
+    }
+
+    // The graph script sizes its canvas from .graph-container's offsetHeight at
+    // init (Math.max(offsetHeight, 250)). The container has no default height, so
+    // it collapses to 0, the canvas falls back to 250px, and the graph fills only
+    // the top of the tall box — leaving the lower half empty. Give BOTH the outer
+    // box and the container the same explicit height so the script measures it
+    // correctly (explicit vh avoids any percentage-resolution timing dependency).
+    & > .graph-outer {
+      height: 65vh;
+      min-height: 420px;
+    }
+
+    & > .graph-outer > .graph-container {
+      height: 65vh;
+      min-height: 420px;
+      width: 100%;
+    }
   }
 }
