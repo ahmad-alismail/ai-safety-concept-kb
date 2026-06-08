@@ -8,15 +8,6 @@
   <a href="https://notebooklm.google.com/notebook/bb18bcc1-096c-40db-b076-f6527624bb5e/artifact/c44a0b27-ad01-4434-aff9-57a358348737?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_" target="_blank">🎧 NotebookLM Audio</a>
 </p>
 
-## Authors
-
-| Author | Affiliation | Contact |
-|--------|-------------|---------|
-| [Ahmad Alismail](https://www.linkedin.com/in/ahmadalismail1/) | Heilbronn University | ahmad.alismail@hs-heilbronn.de |
-| [Woldai Betiel](https://www.linkedin.com/in/betiel-woldai-019436134/) | Ansbach University | b.woldai@hs-ansbach.de |
-| [Prof. Carsten Lanquillon](https://www.linkedin.com/in/prof-dr-carsten-lanquillon-76791061/) | Heilbronn University · [COAI Research](https://coairesearch.org/about/) | carsten@coairesearch.org |
-| [Prof. Sigurd Schacht](https://www.linkedin.com/in/prof-dr-sigurd-schacht-824a8516/) | Ansbach University · [COAI Research](https://coairesearch.org/about/) | sigurd@coairesearch.org |
-
 ## What's in This Repo
 
 | | |
@@ -122,7 +113,14 @@ All workflows are [Claude Code skills](https://docs.anthropic.com/en/docs/claude
 | **`/compare [topic]`** | Generates a cross-source comparison table with analysis. Saved to `wiki/comparisons/`. |
 | **`/discover [query]`** | Searches the web for relevant papers, dedupes against existing sources, and downloads accepted PDFs to `staging-area/` with standardized naming. |
 
-## About COAI Research
+## Authors
+
+| Author | Affiliation | Contact |
+|--------|-------------|---------|
+| [Ahmad Alismail](https://www.linkedin.com/in/ahmadalismail1/) | Heilbronn University | ahmad.alismail@hs-heilbronn.de |
+| [Woldai Betiel](https://www.linkedin.com/in/betiel-woldai-019436134/) | Ansbach University | b.woldai@hs-ansbach.de |
+| [Prof. Carsten Lanquillon](https://www.linkedin.com/in/prof-dr-carsten-lanquillon-76791061/) | Heilbronn University · [COAI Research](https://coairesearch.org/about/) | carsten@coairesearch.org |
+| [Prof. Sigurd Schacht](https://www.linkedin.com/in/prof-dr-sigurd-schacht-824a8516/) | Ansbach University · [COAI Research](https://coairesearch.org/about/) | sigurd@coairesearch.org |
 
 [COAI Research](https://coairesearch.org) is a non-profit AI research institute based in Germany. Its mission is to ensure advanced AI systems remain aligned with human values — transparent, controllable, and beneficial for society.
 
